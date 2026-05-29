@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-09-01">
+<meta name="description" content="Desarrollo e implementación de un sistema IoT utilizando ESP32 y AWS IoT Core para el monitoreo en tiempo real de partículas PM2.5, con visualización de datos a través de ThingSpeak.">
 
-<title>quarto-inputc4747953c3beffda – &lt;span style='font-size: 1.4em; font-weight: bold;'&gt;Ricardo Cebada Fuentes&lt;/span&gt; &lt;span style='font-size: 0.9em; color: #666;'&gt;| Data Analyst &amp; IoT Developer&lt;/span&gt;</title>
+<title>PumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5 – Ricardo Cebada Fuentes | Data Analyst &amp; IoT Developer</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,22 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -70,6 +73,35 @@ ul.task-list li input[type="checkbox"] {
   }
 }</script>
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script defer="" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="styles.css">
 </head>
@@ -81,7 +113,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title"><span style="font-size: 1.4em; font-weight: bold;">Ricardo Cebada Fuentes</span> <span style="font-size: 0.9em; color: #666;">| Data Analyst &amp; IoT Developer</span></span>
     </a>
   </div>
@@ -92,19 +124,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./portfolio.html"> 
+    <a class="nav-link" href="../portfolio.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./gallery.html"> 
+    <a class="nav-link" href="../gallery.html"> 
 <span class="menu-text">Gallery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">Resume</span></a>
   </li>  
 </ul>
@@ -121,59 +153,121 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
+   
   <ul>
-  <li><a href="#bienvenido" id="toc-bienvenido" class="nav-link active" data-scroll-target="#bienvenido">Bienvenido</a></li>
-  <li><a href="#perfil-profesional" id="toc-perfil-profesional" class="nav-link" data-scroll-target="#perfil-profesional">Perfil Profesional</a></li>
-  <li><a href="#un-poco-más-sobre-mí" id="toc-un-poco-más-sobre-mí" class="nav-link" data-scroll-target="#un-poco-más-sobre-mí">Un Poco Más Sobre Mí</a></li>
-  <li><a href="#gracias-por-visitarme" id="toc-gracias-por-visitarme" class="nav-link" data-scroll-target="#gracias-por-visitarme">¡Gracias por visitarme!</a></li>
+  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link active" data-scroll-target="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
+  <li><a href="#descripción-del-proyecto" id="toc-descripción-del-proyecto" class="nav-link" data-scroll-target="#descripción-del-proyecto">Descripción del Proyecto</a></li>
+  <li><a href="#agradecimientos" id="toc-agradecimientos" class="nav-link" data-scroll-target="#agradecimientos">Agradecimientos</a></li>
+  <li><a href="#contacto" id="toc-contacto" class="nav-link" data-scroll-target="#contacto">Contacto</a></li>
+  <li><a href="#enlace-al-dashboard-de-thinspeak" id="toc-enlace-al-dashboard-de-thinspeak" class="nav-link" data-scroll-target="#enlace-al-dashboard-de-thinspeak">Enlace al Dashboard de ThinSpeak</a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="files/ricardo.jpeg" class="about-image
-  rounded " style="width: 20em;">
-<header id="title-block-header" class="quarto-title-block"></header>
-    <div class="about-links">
-  <a href="https://linkedin.com/in/ricardo-cebada-fuentes" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com/RicardoCebada" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">PumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">IoT</div>
+    <div class="quarto-category">Cloud</div>
+    <div class="quarto-category">ThingSpeak</div>
   </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
+  </div>
 
-<section id="bienvenido" class="level1">
-<h1>Bienvenido</h1>
-<hr>
-<p>Mi nombre es <strong>Ricardo</strong>, soy ingeniero mecatrónico por la UNAM, donde también hice estudios de posgrado. En este sitio te comparto más sobre mi trabajo y algunos de los proyectos que he desarrollado a lo largo de mi carrera. También encontrarás una galería con videos e imágenes de entrevistas y presentaciones relacionadas con mi trabajo y otros documentos probatorios.</p>
-</section>
-<section id="perfil-profesional" class="level1">
-<h1>Perfil Profesional</h1>
-<hr>
-<p>Me especializo en la intersección del <em>Análisis de Datos</em> y el <em>Desarrollo de Soluciones IoT</em> (Internet of Things). He participado en proyectos académicos con instituciones nacionales e internacionales y liderado equipos de desarrollo de soluciones tecnológicas IoT y de análisis de datos. Algunas de las áreas en las que he trabajado son el monitoreo remoto y análisis de variables cardiovascular y del medioambiente. Mi enfoque es crear soluciones innovadoras a problemas del entorno real integrando monitoreo de sensores y análisis de datos.</p>
-</section>
-<section id="un-poco-más-sobre-mí" class="level1">
-<h1>Un Poco Más Sobre Mí</h1>
-<hr>
-<p>Soy un apasionado de la tecnología y el conocimiento científico. Me gusta aprender cosas nuevas, explorar diferentes áreas del conocimiento y compartir lo que sé con los demás. Hablo fluidamente el inglés y de forma intermedia el francés. Soy un aficionado de la astronomía, los libros de Historia de México y la música de The Beatles. En mi tiempo libre, disfruto de viajar y recorrer la Ciudad de México en bicicleta. Amante del deporte, formé parte del equipo de atletismo de la UNAM.</p>
-<p>Conoce el blog de mi equipo de running, las <a href="https://gacelas-unam-runningclub.blogspot.com/">Gacelas de la UNAM</a></p>
-</section>
-<section id="gracias-por-visitarme" class="level1">
-<h1>¡Gracias por visitarme!</h1>
-
-
-</section>
-</main></div>
+<div>
+  <div class="description">
+    Desarrollo e implementación de un sistema IoT utilizando ESP32 y AWS IoT Core para el monitoreo en tiempo real de partículas PM2.5, con visualización de datos a través de ThingSpeak.
+  </div>
 </div>
- <!-- /main -->
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="tecnologías-utilizadas" class="level3">
+<h3 class="anchored" data-anchor-id="tecnologías-utilizadas">Tecnologías Utilizadas</h3>
+<ul>
+<li><strong>Hardware:</strong> ESP32, sensores y componentes electrónicos diversos</li>
+<li><strong>Cloud:</strong> ThingSpeak, Twilio (para alertas SMS)</li>
+<li><strong>Software:</strong> Arduino IDE, Python (para análisis de datos y visualización)</li>
+<li><strong>Otros:</strong> Diseño de PCB, Impresión 3D</li>
+</ul>
+</section>
+<section id="descripción-del-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="descripción-del-proyecto">Descripción del Proyecto</h2>
+<div style="text-align: justify;">
+<p>El PM2.5 (<em>Particulate Matter 2.5 <span class="math inline">\(\mu m\)</span></em>) son partículas de tamaño muy pequeño que pueden penetrar profundamente en el sistema respiratorio y que son uno de los principales agentes contaminantes del aire. Se producen principalmente por la quema de combustibles fósiles y actividades industriales. En el ser humano, la exposición prolongada a altas concentraciones de PM2.5 es la causa indirecta de entre 7 y 8 millones de muertes anuales, siendo la segunda causa de muerte prematura en el mundo, superada únicamente por la hipertesión arterial. Aunque la contaminación por PM2.5 no es la causa directa de muerte, su exposición prolongada es un factor que desencadena y agrava otras enfermedades.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pm25_effects.png" class="img-fluid figure-img"></p>
+<figcaption>Efectos del PM2.5 en la salud</figcaption>
+</figure>
+</div>
+<p>En México, el uso de estufas de leña tradicionales continua siendo una práctica común, especialmente en zonas rurales y comunidades indígenas pues forma parte de nuestra identidad cultural y estilo de vida. Desafortunadamente, esto implica un alto riesgo de exposición prolongada a PM2.5 que tendría que ser monitoreado para conocer el nivel de contaminación al que están expuestas las personas que utilizan estas estufas y así poder implementar estrategias de mitigación efectivas.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/pumairq_parts.png" class="img-fluid figure-img"></p>
+<figcaption>Listado de componentes principales y características operativas del sistema PumaAirQ</figcaption>
+</figure>
+</div>
+<p>Con esta motivación, desarrollé <strong>PumaAirQ</strong>, un dispositivo IoT de costo muy accesible (~ 800 MXN) y fácil de usar que permite monitorear en tiempo real la concentración de PM2.5 en el interior de hogares. Aunque fue diseñado pensando en el monitoreo de estufas de leña en zonas remotas con poca conectividad y acceso limitado a la energía eléctrica continua, el PumaAirQ es lo suficientemente versátil como para ser utilizado en cualquier entorno donde se requiera monitorear la calidad del aire de forma remota como oficinas, escuelas o espacios públicos. Gracias a su conectividad IoT, los usuarios pueden acceder a los datos de calidad del aire desde cualquier lugar, recibir alertas en sus teléfonos móviles en caso de niveles peligrosos de PM2.5 y tomar decisiones informadas para proteger su salud y la de sus seres queridos.</p>
+<p>El sistema se compone de un microcontrolador ESP32, sensores de PM2.5, monóxido de carbono, temperatura y humedad, que recopilan continuamente datos de calidad del aire y los envía a la nube de <a href="https://thingspeak.mathworks.com/">ThingSpeak</a>, la cual es una plataforma online que permite generar gráficos en tiempo real, hacer análisis de datos y conectar con plataformas con servicios de notificaciones como <a href="https://www.twilio.com/es-mx">Twilio</a>. Para operar en sitios donde no hay acceso a internet o energía eléctrica, se hace un almacenamiento interno de los datos en una memoria EEPROM que luego se descargan a un teléfono usando Bluetooth. Se emplea también una batería recargable de larga duración que permite una autonomía de hasta 34 días.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/estufa_1.png" class="img-fluid figure-img"></p>
+<figcaption>El PumaAirQ en funcionamiento monitoreando la calidad del aire en una cocina tradicional indígena en Chiapas, México</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/estufa_2.png" class="img-fluid figure-img"></p>
+<figcaption>Descarga de datos del PumaAirQ a través de Bluetooth</figcaption>
+</figure>
+</div>
+</div>
+</section>
+<section id="agradecimientos" class="level2">
+<h2 class="anchored" data-anchor-id="agradecimientos">Agradecimientos</h2>
+<p>Este proyecto se llevó a cabo como parte de mi trabajo en el <a href="https://www.icat.unam.mx/">ICAT-UNAM</a> con el apoyo de la UNAM y la Universidad Autónoma de Morelos.</p>
+</section>
+<section id="contacto" class="level2">
+<h2 class="anchored" data-anchor-id="contacto">Contacto</h2>
+<p>Para más información sobre el proyecto, incluyendo detalles técnicos, diagramas electrónicos, código fuente, etc., puedes enviarme un correo a <a href="mailto:cebada.fi.unam@gmail.com">cebada.fi.unam@gmail.com</a>.</p>
+</section>
+<section id="enlace-al-dashboard-de-thinspeak" class="level2">
+<h2 class="anchored" data-anchor-id="enlace-al-dashboard-de-thinspeak">Enlace al Dashboard de ThinSpeak</h2>
+<p>Si quieres consultar los datos en tiempo real, puedes acceder al <a href="https://thingspeak.mathworks.com/channels/3176006">Enlace al Dashboard vivo</a></p>
+
+
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     

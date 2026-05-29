@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="dcterms.date" content="2025-09-01">
+<meta name="description" content="Arquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).">
 
-<title>quarto-inputc4747953c3beffda – &lt;span style='font-size: 1.4em; font-weight: bold;'&gt;Ricardo Cebada Fuentes&lt;/span&gt; &lt;span style='font-size: 0.9em; color: #666;'&gt;| Data Analyst &amp; IoT Developer&lt;/span&gt;</title>
+<title>OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring – Ricardo Cebada Fuentes | Data Analyst &amp; IoT Developer</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -26,22 +28,23 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<script src="site_libs/quarto-html/quarto.js" type="module"></script>
-<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script src="../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../">
+<script src="../site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="../site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="../site_libs/quarto-html/popper.min.js"></script>
+<script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-7f8f88aac4f3542376d5c11b86a4c14d.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../site_libs/bootstrap/bootstrap-a0f9fd0d421825b736dc1bbcbcba2219.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -81,7 +84,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../index.html">
     <span class="navbar-title"><span style="font-size: 1.4em; font-weight: bold;">Ricardo Cebada Fuentes</span> <span style="font-size: 0.9em; color: #666;">| Data Analyst &amp; IoT Developer</span></span>
     </a>
   </div>
@@ -92,19 +95,19 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="../index.html"> 
 <span class="menu-text">About Me</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./portfolio.html"> 
+    <a class="nav-link" href="../portfolio.html"> 
 <span class="menu-text">Portfolio</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./gallery.html"> 
+    <a class="nav-link" href="../gallery.html"> 
 <span class="menu-text">Gallery</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./cv.html"> 
+    <a class="nav-link" href="../cv.html"> 
 <span class="menu-text">Resume</span></a>
   </li>  
 </ul>
@@ -121,59 +124,78 @@ ul.task-list li input[type="checkbox"] {
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
+   
   <ul>
-  <li><a href="#bienvenido" id="toc-bienvenido" class="nav-link active" data-scroll-target="#bienvenido">Bienvenido</a></li>
-  <li><a href="#perfil-profesional" id="toc-perfil-profesional" class="nav-link" data-scroll-target="#perfil-profesional">Perfil Profesional</a></li>
-  <li><a href="#un-poco-más-sobre-mí" id="toc-un-poco-más-sobre-mí" class="nav-link" data-scroll-target="#un-poco-más-sobre-mí">Un Poco Más Sobre Mí</a></li>
-  <li><a href="#gracias-por-visitarme" id="toc-gracias-por-visitarme" class="nav-link" data-scroll-target="#gracias-por-visitarme">¡Gracias por visitarme!</a></li>
+  <li><a href="#descripción-del-proyecto" id="toc-descripción-del-proyecto" class="nav-link active" data-scroll-target="#descripción-del-proyecto">Descripción del Proyecto</a>
+  <ul class="collapse">
+  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link" data-scroll-target="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
-<div class="quarto-about-trestles">
-  <div class="about-entity">
-    <img src="files/ricardo.jpeg" class="about-image
-  rounded " style="width: 20em;">
-<header id="title-block-header" class="quarto-title-block"></header>
-    <div class="about-links">
-  <a href="https://linkedin.com/in/ricardo-cebada-fuentes" class="about-link" rel="" target="">
-    <i class="bi bi-linkedin"></i>
-     <span class="about-link-text">LinkedIn</span>
-  </a>
-  <a href="https://github.com/RicardoCebada" class="about-link" rel="" target="">
-    <i class="bi bi-github"></i>
-     <span class="about-link-text">Github</span>
-  </a>
-</div>
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">IoT</div>
+    <div class="quarto-category">Cloud</div>
+    <div class="quarto-category">AWS</div>
   </div>
-  <div class="about-contents"><main class="content" id="quarto-document-content">
+  </div>
 
-<section id="bienvenido" class="level1">
-<h1>Bienvenido</h1>
-<hr>
-<p>Mi nombre es <strong>Ricardo</strong>, soy ingeniero mecatrónico por la UNAM, donde también hice estudios de posgrado. En este sitio te comparto más sobre mi trabajo y algunos de los proyectos que he desarrollado a lo largo de mi carrera. También encontrarás una galería con videos e imágenes de entrevistas y presentaciones relacionadas con mi trabajo y otros documentos probatorios.</p>
-</section>
-<section id="perfil-profesional" class="level1">
-<h1>Perfil Profesional</h1>
-<hr>
-<p>Me especializo en la intersección del <em>Análisis de Datos</em> y el <em>Desarrollo de Soluciones IoT</em> (Internet of Things). He participado en proyectos académicos con instituciones nacionales e internacionales y liderado equipos de desarrollo de soluciones tecnológicas IoT y de análisis de datos. Algunas de las áreas en las que he trabajado son el monitoreo remoto y análisis de variables cardiovascular y del medioambiente. Mi enfoque es crear soluciones innovadoras a problemas del entorno real integrando monitoreo de sensores y análisis de datos.</p>
-</section>
-<section id="un-poco-más-sobre-mí" class="level1">
-<h1>Un Poco Más Sobre Mí</h1>
-<hr>
-<p>Soy un apasionado de la tecnología y el conocimiento científico. Me gusta aprender cosas nuevas, explorar diferentes áreas del conocimiento y compartir lo que sé con los demás. Hablo fluidamente el inglés y de forma intermedia el francés. Soy un aficionado de la astronomía, los libros de Historia de México y la música de The Beatles. En mi tiempo libre, disfruto de viajar y recorrer la Ciudad de México en bicicleta. Amante del deporte, formé parte del equipo de atletismo de la UNAM.</p>
-<p>Conoce el blog de mi equipo de running, las <a href="https://gacelas-unam-runningclub.blogspot.com/">Gacelas de la UNAM</a></p>
-</section>
-<section id="gracias-por-visitarme" class="level1">
-<h1>¡Gracias por visitarme!</h1>
-
-
-</section>
-</main></div>
+<div>
+  <div class="description">
+    Arquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).
+  </div>
 </div>
- <!-- /main -->
+
+
+<div class="quarto-title-meta">
+
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">September 1, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="descripción-del-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="descripción-del-proyecto">Descripción del Proyecto</h2>
+<p>Este proyecto consistió en el despliegue de estaciones meteorológicas…</p>
+<section id="tecnologías-utilizadas" class="level3">
+<h3 class="anchored" data-anchor-id="tecnologías-utilizadas">Tecnologías Utilizadas</h3>
+<ul>
+<li><strong>Hardware:</strong> ESP32, Sensores PM2.5.</li>
+<li><strong>Cloud:</strong> AWS IoT Core, ThingSpeak.</li>
+</ul>
+<p><a href="...">Enlace al Dashboard vivo</a></p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
   window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
     const isCodeAnnotation = (el) => {
       for (const clz of el.classList) {
         if (clz.startsWith('code-annotation-')) {                     
