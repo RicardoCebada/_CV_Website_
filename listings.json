@@ -2,6 +2,7 @@
   {
     "listing": "/portfolio.html",
     "items": [
+      "/projects/cdmx_marathon_analysis.html",
       "/projects/oxipuma_connect.html",
       "/projects/pm25_monitoring.html",
       "/projects/ppg_signals.html",

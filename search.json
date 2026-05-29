@@ -16,44 +16,58 @@
   {
     "objectID": "projects/pm25_monitoring.html",
     "href": "projects/pm25_monitoring.html",
-    "title": "PumaAirQ: IoT System for Indoor PM2.5 Monitoring",
+    "title": "PumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5",
     "section": "",
-    "text": "Este proyecto consistió en el despliegue de estaciones meteorológicas…\n\n\n\nHardware: ESP32, Sensores PM2.5.\nCloud: AWS IoT Core, ThingSpeak.\n\nEnlace al Dashboard vivo"
+    "text": "Hardware: ESP32, sensores y componentes electrónicos diversos\nCloud: ThingSpeak, Twilio (para alertas SMS)\nSoftware: Arduino IDE, Python (para análisis de datos y visualización)\nOtros: Diseño de PCB, Impresión 3D"
   },
   {
     "objectID": "projects/pm25_monitoring.html#descripción-del-proyecto",
     "href": "projects/pm25_monitoring.html#descripción-del-proyecto",
-    "title": "PumaAirQ: IoT System for Indoor PM2.5 Monitoring",
+    "title": "PumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5",
+    "section": "Descripción del Proyecto",
+    "text": "Descripción del Proyecto\n\nEl PM2.5 (Particulate Matter 2.5 \\(\\mu m\\)) son partículas de tamaño muy pequeño que pueden penetrar profundamente en el sistema respiratorio y que son uno de los principales agentes contaminantes del aire. Se producen principalmente por la quema de combustibles fósiles y actividades industriales. En el ser humano, la exposición prolongada a altas concentraciones de PM2.5 es la causa indirecta de entre 7 y 8 millones de muertes anuales, siendo la segunda causa de muerte prematura en el mundo, superada únicamente por la hipertesión arterial. Aunque la contaminación por PM2.5 no es la causa directa de muerte, su exposición prolongada es un factor que desencadena y agrava otras enfermedades.\n\n\n\nEfectos del PM2.5 en la salud\n\n\nEn México, el uso de estufas de leña tradicionales continua siendo una práctica común, especialmente en zonas rurales y comunidades indígenas pues forma parte de nuestra identidad cultural y estilo de vida. Desafortunadamente, esto implica un alto riesgo de exposición prolongada a PM2.5 que tendría que ser monitoreado para conocer el nivel de contaminación al que están expuestas las personas que utilizan estas estufas y así poder implementar estrategias de mitigación efectivas.\n\n\n\nListado de componentes principales y características operativas del sistema PumaAirQ\n\n\nCon esta motivación, desarrollé PumaAirQ, un dispositivo IoT de costo muy accesible (~ 800 MXN) y fácil de usar que permite monitorear en tiempo real la concentración de PM2.5 en el interior de hogares. Aunque fue diseñado pensando en el monitoreo de estufas de leña en zonas remotas con poca conectividad y acceso limitado a la energía eléctrica continua, el PumaAirQ es lo suficientemente versátil como para ser utilizado en cualquier entorno donde se requiera monitorear la calidad del aire de forma remota como oficinas, escuelas o espacios públicos. Gracias a su conectividad IoT, los usuarios pueden acceder a los datos de calidad del aire desde cualquier lugar, recibir alertas en sus teléfonos móviles en caso de niveles peligrosos de PM2.5 y tomar decisiones informadas para proteger su salud y la de sus seres queridos.\nEl sistema se compone de un microcontrolador ESP32, sensores de PM2.5, monóxido de carbono, temperatura y humedad, que recopilan continuamente datos de calidad del aire y los envía a la nube de ThingSpeak, la cual es una plataforma online que permite generar gráficos en tiempo real, hacer análisis de datos y conectar con plataformas con servicios de notificaciones como Twilio. Para operar en sitios donde no hay acceso a internet o energía eléctrica, se hace un almacenamiento interno de los datos en una memoria EEPROM que luego se descargan a un teléfono usando Bluetooth. Se emplea también una batería recargable de larga duración que permite una autonomía de hasta 34 días.\n\n\n\nEl PumaAirQ en funcionamiento monitoreando la calidad del aire en una cocina tradicional indígena en Chiapas, México\n\n\n\n\n\nDescarga de datos del PumaAirQ a través de Bluetooth"
+  },
+  {
+    "objectID": "projects/pm25_monitoring.html#agradecimientos",
+    "href": "projects/pm25_monitoring.html#agradecimientos",
+    "title": "PumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5",
+    "section": "Agradecimientos",
+    "text": "Agradecimientos\nEste proyecto se llevó a cabo como parte de mi trabajo en el ICAT-UNAM con el apoyo de la UNAM y la Universidad Autónoma de Morelos."
+  },
+  {
+    "objectID": "projects/pm25_monitoring.html#contacto",
+    "href": "projects/pm25_monitoring.html#contacto",
+    "title": "PumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5",
+    "section": "Contacto",
+    "text": "Contacto\nPara más información sobre el proyecto, incluyendo detalles técnicos, diagramas electrónicos, código fuente, etc., puedes enviarme un correo a cebada.fi.unam@gmail.com."
+  },
+  {
+    "objectID": "projects/pm25_monitoring.html#enlace-al-dashboard-de-thinspeak",
+    "href": "projects/pm25_monitoring.html#enlace-al-dashboard-de-thinspeak",
+    "title": "PumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5",
+    "section": "Enlace al Dashboard de ThinSpeak",
+    "text": "Enlace al Dashboard de ThinSpeak\nSi quieres consultar los datos en tiempo real, puedes acceder al Enlace al Dashboard vivo"
+  },
+  {
+    "objectID": "projects/cdmx_marathon_analysis.html",
+    "href": "projects/cdmx_marathon_analysis.html",
+    "title": "Maratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Análisis de Tendencias y Desempeño de los Corredores en las Ediciones 2021-2025",
     "section": "",
-    "text": "Este proyecto consistió en el despliegue de estaciones meteorológicas…\n\n\n\nHardware: ESP32, Sensores PM2.5.\nCloud: AWS IoT Core, ThingSpeak.\n\nEnlace al Dashboard vivo"
+    "text": "Imagen representativa de la Maratón de la Ciudad de México 2025\n#agregar un bloque de python para mostrar un ejemplo de análisis de datos\nimport requests\nimport pandas as pd\n\ndef get_data (url, marathon_id):\n  payload = {\n    \"distancia\": \"MARATON\",\n    \"carreraId\": marathon_id, #ID del Maraton\n    \"categoriaId\": \"\"\n}\n  try:\n    response=requests.post(url, data=payload)\n    if response.status_code == 200:\n      datos=response.json() #Convertimos en JSON\n      df=pd.DataFrame(datos) #Convertimos en DF\n      print(f\"Datos del ID {marathon_id} obtenidos con éxito\")\n      return df\n    else:\n      print(f\"Error de esta en el ID {marathon_id}. Error: {response.status_code}\")\n  except requests.exceptions.RequestException as e:\n    print(f\"Error en la solicitud POST del ID {marathon_id}: {e}\")\n\n#Declaramos un string con la url de MARCATE desde donde se consultan los datos\nurl = \"https://resultados.marcate.events/eventos/OverAllFilter\"\n\nmarathons_ids={\n    \"2025\": \"SPTMCAR1738126024\",\n    \"2024\": \"SPTMCAR1708028995\",\n    \"2023\": \"SPTMCAR1693172878\",\n    \"2022\": \"SPTMCAR1661467017\",\n    \"2021\": \"SPTMCAR1637605572\"\n}\n#Realizamos la consulta de datos usando dictionary comprehension para facilitar la limpieza\nresults={year:get_data(url,marathon_id) for year, marathon_id in marathons_ids.items()}\n\nDatos del ID SPTMCAR1738126024 obtenidos con éxito\nDatos del ID SPTMCAR1708028995 obtenidos con éxito\nDatos del ID SPTMCAR1693172878 obtenidos con éxito\nDatos del ID SPTMCAR1661467017 obtenidos con éxito\nDatos del ID SPTMCAR1637605572 obtenidos con éxito"
   },
   {
-    "objectID": "portfolio.html",
-    "href": "portfolio.html",
-    "title": "Portafolio de Proyectos",
+    "objectID": "projects/cdmx_marathon_analysis.html#descripción-del-proyecto",
+    "href": "projects/cdmx_marathon_analysis.html#descripción-del-proyecto",
+    "title": "Maratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Análisis de Tendencias y Desempeño de los Corredores en las Ediciones 2021-2025",
+    "section": "Descripción del Proyecto",
+    "text": "Descripción del Proyecto\nEl Maratón de la Ciudad de México es uno de los eventos deportivos más importantes del país, atrayendo a corredores de todo el mundo. Aunque desde el 2018 el maratón CDMX ostenta la prestigiosa categoría Gold Label, no forma parte de los llamados “World Marathon Majors” que incluyen a los maratones de Boston, Londres, Berlín, Chicago, Nueva York y Tokio. Una de las razones principales de esta exclusión es su exigente recorrido que se desarrolla a una altitud promedio de 2,240 metros sobre el nivel del mar, lo que lo convierte en uno de los maratones más difíciles del mundo.\n\nTecnologías Utilizadas\n\nLenguaje de Programación: Python.\nLibrerías: pandas, numpy, matplotlib, seaborn."
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Bienvenid",
     "section": "",
-    "text": "Aquí presento los proyectos más destacados de mi trayectoria en investigación y desarrollo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring\n\n\n\nIoT\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPumaAirQ: IoT System for Indoor PM2.5 Monitoring\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPPG Signals Analysis for Cardiovascular Health Monitoring\n\n\n\nData Science\n\nPython\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIoT Weather Stations for Environmental Monitoring in Mexico\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nEstaciones IoT de bajo costo desarrolladas en colaboración con la Universidad de Clark.\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "gallery.html",
-    "href": "gallery.html",
-    "title": "Galería Multimedia",
-    "section": "",
-    "text": "En esta sección encontrarás videos de entrevistas, presentaciones en conferencias y webinars relacionados con mis proyectos y áreas de especialización."
-  },
-  {
-    "objectID": "gallery.html#presentación-en-el-ix-latin-american-congress-on-biomedical-engineering-claib-2022",
-    "href": "gallery.html#presentación-en-el-ix-latin-american-congress-on-biomedical-engineering-claib-2022",
-    "title": "Galería Multimedia",
-    "section": "Presentación en el IX Latin American Congress on Biomedical Engineering (CLAIB 2022)",
-    "text": "Presentación en el IX Latin American Congress on Biomedical Engineering (CLAIB 2022)"
-  },
-  {
-    "objectID": "gallery.html#fragmento-del-video-promocional-del-proyecto-de-monitoreo-climático-colaboración-unam-clark-university",
-    "href": "gallery.html#fragmento-del-video-promocional-del-proyecto-de-monitoreo-climático-colaboración-unam-clark-university",
-    "title": "Galería Multimedia",
-    "section": "Fragmento del Video Promocional del Proyecto de Monitoreo Climático (Colaboración UNAM-Clark University)",
-    "text": "Fragmento del Video Promocional del Proyecto de Monitoreo Climático (Colaboración UNAM-Clark University)\n\n\nDocumentación y Avales\nAquí puedes consultar la carta de reconocimiento de la Universidad de Clark por el proyecto de monitoreo lacustre[cite: 1].\nDescargar Carta de Agradecimiento Clark-UNAM (PDF)"
+    "text": "Bienvenid\n\nMi nombre es Ricardo, soy ingeniero mecatrónico por la UNAM, donde también hice estudios de posgrado. En este sitio te comparto más sobre mi trabajo y algunos de los proyectos que he desarrollado a lo largo de mi carrera. También encontrarás una galería con videos e imágenes de entrevistas y presentaciones relacionadas con mi trabajo y otros documentos probatorios.\n\n\nPerfil Profesional\n\nMe especializo en la intersección del Análisis de Datos y el Desarrollo de Soluciones IoT (Internet of Things). He participado en proyectos académicos con instituciones nacionales e internacionales y liderado equipos de desarrollo de soluciones tecnológicas IoT y de análisis de datos. Algunas de las áreas en las que he trabajado son el monitoreo remoto y análisis de variables cardiovascular y del medioambiente. Mi enfoque es crear soluciones innovadoras a problemas del entorno real integrando monitoreo de sensores y análisis de datos.\n\n\nUn Poco Más Sobre Mí\n\nSoy un apasionado de la tecnología y el conocimiento científico. Me gusta aprender cosas nuevas, explorar diferentes áreas del conocimiento y compartir lo que sé con los demás. Hablo fluidamente el inglés y de forma intermedia el francés. Soy un aficionado de la astronomía, los libros de Historia de México y la música de The Beatles. En mi tiempo libre, disfruto de viajar y recorrer la Ciudad de México en bicicleta. Amante del deporte, formé parte del equipo de atletismo de la UNAM.\nConoce el blog de mi equipo de running, las Gacelas de la UNAM\n\n\n¡Gracias por visitarme!"
   },
   {
     "objectID": "cv.html",
@@ -77,11 +91,32 @@
     "text": "Cartas de Recomendación y Avales\nA lo largo de mi formación doctoral e investigación en el ICAT, he tenido la oportunidad de liderar proyectos con impacto internacional y nacional. Aquí puede descargar las cartas de recomendación y reconocimientos correspondientes:\n\n\nInstitucionales e Internacionales\n\nUniversidad de Clark (USA): Carta de agradecimiento y reconocimiento por el liderazgo en el despliegue de estaciones IoT en México.\n\nDescargar PDF\n\nMedalla Gustavo Baz Prada: Reconocimiento al desempeño excepcional en proyectos de impacto social.\n\nDescargar PDF\n\n\n\n\nPropiedad Intelectual\n\nRegistro INDAUTOR: Certificado de registro de software para el procesamiento de señales biomédicas (PPG).\n\nDescargar PDF"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Sobre mí",
+    "objectID": "gallery.html",
+    "href": "gallery.html",
+    "title": "Galería Multimedia",
     "section": "",
-    "text": "¡Hola! Soy Ricardo, ingeniero Mecatrónico con posgrado por la UNAM. Me especializo en la intersección del Análisis de Datos y el Desarrollo de Soluciones IoT (Internet of Things). He participado en proyectos académicos nacionales e internacionales y liderado equipos de desarrollo de soluciones tecnológicas IoT y análisis de datos en las áreas de monitoreo ambiental, análisis de salud cardiovascular. Mi enfoque es crear soluciones innovadoras que integren hardware y software para resolver problemas reales. He impartido cursos profesionales en las áreas de Análisis y Visualización de Datos y Desarrollo de Prototipos. En este sitio encontrarás mi CV, portafolio de proyectos y una galería multimedia con entrevistas y presentaciones relacionadas con mi trabajo. ¡Gracias por visitar!"
+    "text": "En esta sección encontrarás videos de entrevistas, presentaciones en conferencias y webinars relacionados con mis proyectos y áreas de especialización."
+  },
+  {
+    "objectID": "gallery.html#presentación-en-el-ix-latin-american-congress-on-biomedical-engineering-claib-2022",
+    "href": "gallery.html#presentación-en-el-ix-latin-american-congress-on-biomedical-engineering-claib-2022",
+    "title": "Galería Multimedia",
+    "section": "Presentación en el IX Latin American Congress on Biomedical Engineering (CLAIB 2022)",
+    "text": "Presentación en el IX Latin American Congress on Biomedical Engineering (CLAIB 2022)"
+  },
+  {
+    "objectID": "gallery.html#fragmento-del-video-promocional-del-proyecto-de-monitoreo-climático-colaboración-unam-clark-university",
+    "href": "gallery.html#fragmento-del-video-promocional-del-proyecto-de-monitoreo-climático-colaboración-unam-clark-university",
+    "title": "Galería Multimedia",
+    "section": "Fragmento del Video Promocional del Proyecto de Monitoreo Climático (Colaboración UNAM-Clark University)",
+    "text": "Fragmento del Video Promocional del Proyecto de Monitoreo Climático (Colaboración UNAM-Clark University)\n\n\nDocumentación y Avales\nAquí puedes consultar la carta de reconocimiento de la Universidad de Clark por el proyecto de monitoreo lacustre[cite: 1].\nDescargar Carta de Agradecimiento Clark-UNAM (PDF)"
+  },
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "Portafolio de Proyectos",
+    "section": "",
+    "text": "Aquí presento los proyectos más destacados de mi trayectoria en investigación y desarrollo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Análisis de Tendencias y Desempeño de los Corredores en las Ediciones 2021-2025\n\n\n\nData Science\n\nPython\n\n\n\nEn esta entrada, utilizaremos Python para explorar los resultados oficiales de las ediciones 2021 a 2025, con el objetivo de identificar tendencias en el desempeño de los…\n\n\n\n\n\n\nSep 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nOxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring\n\n\n\nIoT\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nDesarrollo e implementación de un sistema IoT utilizando ESP32 y AWS IoT Core para el monitoreo en tiempo real de partículas PM2.5, con visualización de datos a través de…\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPPG Signals Analysis for Cardiovascular Health Monitoring\n\n\n\nData Science\n\nPython\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIoT Weather Stations for Environmental Monitoring in Mexico\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nEstaciones IoT de bajo costo desarrolladas en colaboración con la Universidad de Clark.\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/oxipuma_connect.html",
