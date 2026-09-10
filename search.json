@@ -2,16 +2,16 @@
   {
     "objectID": "projects/weather_monitoring.html",
     "href": "projects/weather_monitoring.html",
-    "title": "IoT Weather Stations for Environmental Monitoring in Mexico",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
     "section": "",
-    "text": "Este proyecto consistió en el despliegue de estaciones meteorológicas…\n\n\n\nHardware: ESP32, Sensores PM2.5.\nCloud: AWS IoT Core, ThingSpeak.\n\nEnlace al Dashboard vivo"
+    "text": "Hardware: Particle Boron, Sensores meteorológicos\nCloud: ThingSpeak, Twilio (para alertas SMS), Particle IO\nSoftware: PlatformIO, Python (para análisis de datos y visualización)"
   },
   {
     "objectID": "projects/weather_monitoring.html#descripción-del-proyecto",
     "href": "projects/weather_monitoring.html#descripción-del-proyecto",
-    "title": "IoT Weather Stations for Environmental Monitoring in Mexico",
-    "section": "",
-    "text": "Este proyecto consistió en el despliegue de estaciones meteorológicas…\n\n\n\nHardware: ESP32, Sensores PM2.5.\nCloud: AWS IoT Core, ThingSpeak.\n\nEnlace al Dashboard vivo"
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Descripción del Proyecto",
+    "text": "Descripción del Proyecto\n\n\n\n\nEstación meteorológica IoT desplegada en la zona chinampera de Tláhuac, Ciudad de México\n\n\nEste proyecto consistió en el desarrollo y despligue en campo de 3 estaciones meteorológicas de alto desempeño y conectividad remota con el objetivo de monitorear el impacto del cambio climático en zonas vulnerables del centro de México (Tláhuac, Iztapalapa y Valle de Bravo). Como lider del proyecto, estuve a cargo de la implementación completa de la arquitectura, desde la instrumentación de los sensores meteorológicos, el desarrollo del firmware para la tarjeta de desarrollo, la configuración de la conectividad remota y la implementación del dashboard de visualización y análisisde datos.\n\nVentajas Competitivas\nA defirencia de otras estaciones meteorológicas comerciales con monitoreo remoto WiFi, esta estación utiliza la señal 3G para transmitir los datos a la nube, lo cual permite su despliegue en zonas rurales y remotas donde no hay acceso a internet. Además, su mantenimiento es sencillo gracias a la fabricación mediante impresión 3D y el uso de componentes electrónicos de bajo costo. Esto permite que las estaciones puedan ser reparadas o reemplazadas fácilmente en caso de fallas. Todo esto sin comprometer la precisión y confiabilidad de las mediciones, ya que las estaciones fueron calibradas contra estaciones meteorológicas especializadas. Además, su servicio de notificación automática permite alertar a los usuarios en caso de condiciones extremas, lo cual es especialmente útil para la protección de cultivos y la prevención de riesgos.\n\n\n\nEstación meteorológica IoT desplegada en una escuela del municipio de Valle de Bravo, Estado de México\n\n\nCada estación monitorea las siguientes variables:\n\nTemperatura\nHumedad\nPresión atmosférica\nRadiación solar (visible, UV, infrarroja)\nPrecipitación pluvial\nDirección y velocidad del viento\n\n\n\nArquitectura del Sistema\nEl hardware se implementaró en la tarjeta de desarrollo Particle Boron, la cual permite conectividad remota a través de la red celular 3G que aún cuenta con amplia cobertura en México. La estación mide datos ambientales cada minuto y los transmite a la nube de Particle IO en buffers cada 15 minutos. Es este punto, los datos se redireccionan mediante webhooks hacia la plataforma de ThingSpeak donde se preprocesan, almacenan y visualizan mediante un dashboard construido con MATLAB. Mediante un webkook enlazado a Twilio, se implementa un servicio de notificación automática que emite alertas en caso de condiciones extremas (heladas, lluvias torrenciales, radiación extrema y vientos fuertes). El dashboard puede visualizarse desde dispositivos móviles a través de una aplicación móvil. La arquitectura del sistema se muestra en la siguiente figura:\n\n\n\nArquitectura IoT basada en servicios cloud para el despliegue de las estaciones meteorológicas\n\n\n\n\nDashboard de Visualización de Datos\nLos datos puede monitorearse en tiempo real a través del siguiente Dashbord de ThingSpeak o través de una aplicación móvil. A continuación se muestran algunas capturas de pantalla del dashboard:\n\n\n\nDashboard de visualización de datos meteorológicos en tiempo real\n\n\n\n\nVisualización de Datos de Históricos\nA continuación se muestran una serie de gráficas interctivos de Python (Plotly) con los datos históricos de temperatura, humedad relativa y presión en la estación meteorológica desplegada en Tláhuac, Ciudad de México. Los datos fueron recopilados durante un periodo de 10 días."
   },
   {
     "objectID": "projects/pm25_monitoring.html",
@@ -67,7 +67,7 @@
     "href": "index.html",
     "title": "Bienvenido",
     "section": "",
-    "text": "Bienvenido\n\nMi nombre es Ricardo, soy ingeniero mecatrónico por la UNAM, donde también hice estudios de posgrado. En este sitio te comparto más sobre mi trabajo y algunos de los proyectos que he desarrollado a lo largo de mi carrera. También encontrarás una galería con videos e imágenes de entrevistas y presentaciones relacionadas con mi trabajo y otros documentos probatorios.\n\n\nPerfil Profesional\n\nMe especializo en la intersección del Análisis de Datos y el Desarrollo de Soluciones IoT (Internet of Things). He participado en proyectos académicos con instituciones nacionales e internacionales y liderado equipos de desarrollo de soluciones tecnológicas IoT y de análisis de datos. Algunas de las áreas en las que he trabajado son el monitoreo remoto y análisis de variables cardiovascular y del medioambiente. Mi enfoque es crear soluciones innovadoras a problemas del entorno real integrando monitoreo de sensores y análisis de datos.\n\n\nUn Poco Más Sobre Mí\n\nSoy un apasionado de la tecnología y el conocimiento científico. Me gusta aprender cosas nuevas, explorar diferentes áreas del conocimiento y compartir lo que sé con los demás. Hablo fluidamente el inglés y de forma intermedia el francés. Soy un aficionado de la astronomía, los libros de Historia de México y la música de The Beatles. En mi tiempo libre, disfruto de viajar y recorrer la Ciudad de México en bicicleta. Amante del deporte, formé parte del equipo de atletismo de la UNAM.\nConoce el blog de mi equipo de running, las Gacelas de la UNAM\n\n\n¡Gracias por visitarme!"
+    "text": "Bienvenido\n\n\nMi nombre es Ricardo Cebada Fuentes, soy ingeniero mecatrónico por la UNAM, donde también hice estudios de posgrado. En este sitio te comparto un poco sobre mi trabajo y algunos de los proyectos que he desarrollado a lo largo de mi carrera.\n\nPerfil Profesional\n\nMe especializo en el Análisis de Datos y el Desarrollo de Soluciones IoT (Internet of Things) para aplicaciones diversas. He colaborado en proyectos con instituciones nacionales e internacionales y liderado equipos en el desarrollo de soluciones tecnológicas IoT y de análisis de datos. Algunas de las áreas en las que he trabajado son el monitoreo remoto y análisis de datos cardiovasculas, bioseñales y datos ambientales. Mi enfoque es crear soluciones innovadoras a problemas del entorno real integrando monitoreo de sensores y análisis de datos. Busco integrarme a la industria tecnológica para trasladar mi base analítica y experiencia de investigación de posgrado hacia soluciones de negocio de alto impacto.\n\n\nUn Poco Más Sobre Mí\n\nSoy un apasionado de la tecnología y el conocimiento. Me gusta aprender cosas nuevas constantemente y compartir mi conocimiento con los demás. Hablo fluidamente el inglés y de forma intermedia el francés. Soy un aficionado de la astronomía, los libros de Historia de México y la música de The Beatles. En mi tiempo libre, disfruto recorriendo la Ciudad de México en bicicleta. Soy un amante del deporte, principalmente el atletismo, que he practicado desde hace 10 años.\nConoce el blog de mi equipo de running, las Gacelas de la UNAM\n\n\n¡Gracias por visitarme!"
   },
   {
     "objectID": "cv.html",
@@ -88,7 +88,7 @@
     "href": "cv.html#cartas-de-recomendación-y-avales",
     "title": "Trayectoria Profesional",
     "section": "Cartas de Recomendación y Avales",
-    "text": "Cartas de Recomendación y Avales\nA lo largo de mi formación doctoral e investigación en el ICAT, he tenido la oportunidad de liderar proyectos con impacto internacional y nacional. Aquí puede descargar las cartas de recomendación y reconocimientos correspondientes:\n\n\nInstitucionales e Internacionales\n\nUniversidad de Clark (USA): Carta de agradecimiento y reconocimiento por el liderazgo en el despliegue de estaciones IoT en México.\n\nDescargar PDF\n\nMedalla Gustavo Baz Prada: Reconocimiento al desempeño excepcional en proyectos de impacto social.\n\nDescargar PDF\n\n\n\n\nPropiedad Intelectual\n\nRegistro INDAUTOR: Certificado de registro de software para el procesamiento de señales biomédicas (PPG).\n\nDescargar PDF"
+    "text": "Cartas de Recomendación y Avales\nA lo largo de mi formación en la UNAM he tenido la oportunidad de liderar proyectos con impacto internacional y nacional. En los siguientes enlaces puedes descargar cartas de recomendación y avales que respaldan mi trayectoria profesional.\n\n\nInstitucionales e Internacionales\n\nUniversidad de Clark (USA): Carta de agradecimiento y reconocimiento por el liderazgo en el despliegue de estaciones IoT en México.\n\nDescargar PDF\n\nMedalla Gustavo Baz Prada: Reconocimiento al desempeño excepcional en proyectos de impacto social.\n\nDescargar PDF\n\n\n\n\nPropiedad Intelectual\n\nRegistro INDAUTOR: Certificado de registro de software para el procesamiento de señales biomédicas (PPG).\n\nDescargar PDF"
   },
   {
     "objectID": "gallery.html",
@@ -116,7 +116,7 @@
     "href": "portfolio.html",
     "title": "Portafolio de Proyectos",
     "section": "",
-    "text": "Aquí presento los proyectos más destacados de mi trayectoria en investigación y desarrollo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Análisis de Tendencias y Desempeño de los Corredores en las Ediciones 2021-2025\n\n\n\nData Science\n\nPython\n\n\n\nEn esta entrada, utilizaremos Python para explorar los resultados oficiales de las ediciones 2021 a 2025, con el objetivo de identificar tendencias en el desempeño de los…\n\n\n\n\n\n\nSep 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nOxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring\n\n\n\nIoT\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nDesarrollo e implementación de un sistema IoT utilizando ESP32 y AWS IoT Core para el monitoreo en tiempo real de partículas PM2.5, con visualización de datos a través de…\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPPG Signals Analysis for Cardiovascular Health Monitoring\n\n\n\nData Science\n\nPython\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIoT Weather Stations for Environmental Monitoring in Mexico\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nEstaciones IoT de bajo costo desarrolladas en colaboración con la Universidad de Clark.\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Aquí presento los proyectos más destacados de mi trayectoria en investigación y desarrollo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Análisis de Tendencias y Desempeño de los Corredores en las Ediciones 2021-2025\n\n\n\nData Science\n\nPython\n\n\n\nEn esta entrada, utilizaremos Python para explorar los resultados oficiales de las ediciones 2021 a 2025, con el objetivo de identificar tendencias en el desempeño de los…\n\n\n\n\n\n\nSep 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nOxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring\n\n\n\nIoT\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nDesarrollo e implementación de un sistema IoT utilizando ESP32 y AWS IoT Core para el monitoreo en tiempo real de partículas PM2.5, con visualización de datos a través de…\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPPG Signals Analysis for Cardiovascular Health Monitoring\n\n\n\nData Science\n\nPython\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIoT Weather Stations for Environmental Monitoring in Central Mexico\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nEstaciones meteorológicas inteligentes con conectividad remota IoT fabricadas mediante impresión 3D.\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/oxipuma_connect.html",
@@ -145,5 +145,54 @@
     "title": "PPG Signals Analysis for Cardiovascular Health Monitoring",
     "section": "",
     "text": "Este proyecto consistió en el despliegue de estaciones meteorológicas…\n\n\n\nHardware: ESP32, Sensores PM2.5.\nCloud: AWS IoT Core, ThingSpeak.\n\nEnlace al Dashboard vivo"
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#arquitectura-del-sistema",
+    "href": "projects/weather_monitoring.html#arquitectura-del-sistema",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Arquitectura del Sistema",
+    "text": "Arquitectura del Sistema\nEl hardware se implementaró en la tarjeta de desarrollo Particle Boron, la cual permite conectividad remota a través de la red celular 3G que aún cuenta con amplia cobertura en México. La estación mide datos ambientales cada minuto y los transmite a la nube de Particle IO en buffers cada 15 minutos. Es este punto, los datos se redireccionan mediante webhooks hacia la plataforma de ThingSpeak donde se preprocesan, almacenan y visualizan mediante un dashboard construido con MATLAB. Mediante un webkook enlazado a Twilio, se implementa un servicio de notificación automática que emite alertas en caso de condiciones extremas (heladas, lluvias torrenciales, radiación extrema y vientos fuertes). El dashboard puede visualizarse desde dispositivos móviles a través de una aplicación móvil. La arquitectura del sistema se muestra en la siguiente figura:\n\n\n\nArquitectura IoT basada en servicios cloud para el despliegue de las estaciones meteorológicas"
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#dashboard-de-visualización-de-datos",
+    "href": "projects/weather_monitoring.html#dashboard-de-visualización-de-datos",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Dashboard de Visualización de Datos",
+    "text": "Dashboard de Visualización de Datos\nLos datos puede monitorearse en tiempo real a través del siguiente Dashbord de ThingSpeak o través de una aplicación móvil. A continuación se muestran algunas capturas de pantalla del dashboard:\n\n\n\nDashboard de visualización de datos meteorológicos en tiempo real"
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#agradecimientos",
+    "href": "projects/weather_monitoring.html#agradecimientos",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Agradecimientos",
+    "text": "Agradecimientos\nEste proyecto se llevó a cabo como una colaboración entre el Instituto de Ecología de la UNAM y Clark University (USA) con financiamiento de la National Science Foundation de los Estados Unidos."
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#contacto",
+    "href": "projects/weather_monitoring.html#contacto",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Contacto",
+    "text": "Contacto\nPara más información sobre el proyecto, incluyendo detalles técnicos, diagramas, código, etc., puedes enviarme un correo a cebada.fi.unam@gmail.com."
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#ventajas-competitivas",
+    "href": "projects/weather_monitoring.html#ventajas-competitivas",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Ventajas Competitivas",
+    "text": "Ventajas Competitivas\nA defirencia de otras estaciones meteorológicas comerciales con monitoreo remoto WiFi, esta estación utiliza la señal 3G para transmitir los datos a la nube, lo cual permite su despliegue en zonas rurales y remotas donde no hay acceso a internet. Además, su mantenimiento es sencillo gracias a la fabricación mediante impresión 3D y el uso de componentes electrónicos de bajo costo. Esto permite que las estaciones puedan ser reparadas o reemplazadas fácilmente en caso de fallas. Todo esto sin comprometer la precisión y confiabilidad de las mediciones, ya que las estaciones fueron calibradas contra estaciones meteorológicas especializadas. Además, su servicio de notificación automática permite alertar a los usuarios en caso de condiciones extremas, lo cual es especialmente útil para la protección de cultivos y la prevención de riesgos.\n\n\n\nEstación meteorológica IoT desplegada en una escuela del municipio de Valle de Bravo, Estado de México\n\n\nCada estación monitorea las siguientes variables:\n\nTemperatura\nHumedad\nPresión atmosférica\nRadiación solar (visible, UV, infrarroja)\nPrecipitación pluvial\nDirección y velocidad del viento"
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#visualización-de-datos-de-históricos",
+    "href": "projects/weather_monitoring.html#visualización-de-datos-de-históricos",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Visualización de Datos de Históricos",
+    "text": "Visualización de Datos de Históricos\nA continuación se muestran una serie de gráficas interctivos de Python (Plotly) con los datos históricos de temperatura, humedad relativa y presión en la estación meteorológica desplegada en Tláhuac, Ciudad de México. Los datos fueron recopilados durante un periodo de 10 días."
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#probatorios",
+    "href": "projects/weather_monitoring.html#probatorios",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Probatorios",
+    "text": "Probatorios\nEn el siguiente enlace puedes descargar un documento emitido por Clark University como probatorio de mi trabajo en este proyecto: Carta de Clark University"
   }
 ]

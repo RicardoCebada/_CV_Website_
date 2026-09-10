@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="dcterms.date" content="2025-09-01">
-<meta name="description" content="Estaciones IoT de bajo costo desarrolladas en colaboración con la Universidad de Clark.">
+<meta name="description" content="Estaciones meteorológicas inteligentes con conectividad remota IoT fabricadas mediante impresión 3D.">
 
-<title>IoT Weather Stations for Environmental Monitoring in Mexico – Ricardo Cebada Fuentes | Data Analyst &amp; IoT Developer</title>
+<title>IoT Weather Stations for Environmental Monitoring in Central Mexico – Ricardo Cebada Fuentes | Data Analyst &amp; IoT Developer</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -126,10 +126,11 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#descripción-del-proyecto" id="toc-descripción-del-proyecto" class="nav-link active" data-scroll-target="#descripción-del-proyecto">Descripción del Proyecto</a>
-  <ul class="collapse">
-  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link" data-scroll-target="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
-  </ul></li>
+  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link active" data-scroll-target="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
+  <li><a href="#descripción-del-proyecto" id="toc-descripción-del-proyecto" class="nav-link" data-scroll-target="#descripción-del-proyecto">Descripción del Proyecto</a></li>
+  <li><a href="#probatorios" id="toc-probatorios" class="nav-link" data-scroll-target="#probatorios">Probatorios</a></li>
+  <li><a href="#agradecimientos" id="toc-agradecimientos" class="nav-link" data-scroll-target="#agradecimientos">Agradecimientos</a></li>
+  <li><a href="#contacto" id="toc-contacto" class="nav-link" data-scroll-target="#contacto">Contacto</a></li>
   </ul>
 </nav>
     </div>
@@ -138,7 +139,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">IoT Weather Stations for Environmental Monitoring in Mexico</h1>
+<h1 class="title">IoT Weather Stations for Environmental Monitoring in Central Mexico</h1>
   <div class="quarto-categories">
     <div class="quarto-category">IoT</div>
     <div class="quarto-category">Cloud</div>
@@ -148,7 +149,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div>
   <div class="description">
-    Estaciones IoT de bajo costo desarrolladas en colaboración con la Universidad de Clark.
+    Estaciones meteorológicas inteligentes con conectividad remota IoT fabricadas mediante impresión 3D.
   </div>
 </div>
 
@@ -171,19 +172,88 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="descripción-del-proyecto" class="level2">
-<h2 class="anchored" data-anchor-id="descripción-del-proyecto">Descripción del Proyecto</h2>
-<p>Este proyecto consistió en el despliegue de estaciones meteorológicas…</p>
 <section id="tecnologías-utilizadas" class="level3">
 <h3 class="anchored" data-anchor-id="tecnologías-utilizadas">Tecnologías Utilizadas</h3>
 <ul>
-<li><strong>Hardware:</strong> ESP32, Sensores PM2.5.</li>
-<li><strong>Cloud:</strong> AWS IoT Core, ThingSpeak.</li>
+<li><strong>Hardware:</strong> Particle Boron, Sensores meteorológicos</li>
+<li><strong>Cloud:</strong> ThingSpeak, Twilio (para alertas SMS), Particle IO</li>
+<li><strong>Software:</strong> PlatformIO, Python (para análisis de datos y visualización)</li>
 </ul>
-<p><a href="...">Enlace al Dashboard vivo</a></p>
-
-
 </section>
+<section id="descripción-del-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="descripción-del-proyecto">Descripción del Proyecto</h2>
+<div style="text-align: justify;">
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/weather_station.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Estación meteorológica IoT desplegada en la zona chinampera de Tláhuac, Ciudad de México</figcaption>
+</figure>
+</div>
+<p>Este proyecto consistió en el desarrollo y despligue en campo de 3 estaciones meteorológicas de alto desempeño y conectividad remota con el objetivo de monitorear el impacto del cambio climático en zonas vulnerables del centro de México (Tláhuac, Iztapalapa y Valle de Bravo). Como lider del proyecto, estuve a cargo de la implementación completa de la arquitectura, desde la instrumentación de los sensores meteorológicos, el desarrollo del firmware para la tarjeta de desarrollo, la configuración de la conectividad remota y la implementación del dashboard de visualización y análisisde datos.</p>
+<section id="ventajas-competitivas" class="level2">
+<h2 class="anchored" data-anchor-id="ventajas-competitivas">Ventajas Competitivas</h2>
+<p>A defirencia de otras estaciones meteorológicas comerciales con monitoreo remoto WiFi, esta estación utiliza la señal 3G para transmitir los datos a la nube, lo cual permite su despliegue en zonas rurales y remotas donde no hay acceso a internet. Además, su mantenimiento es sencillo gracias a la fabricación mediante impresión 3D y el uso de componentes electrónicos de bajo costo. Esto permite que las estaciones puedan ser reparadas o reemplazadas fácilmente en caso de fallas. Todo esto sin comprometer la precisión y confiabilidad de las mediciones, ya que las estaciones fueron calibradas contra estaciones meteorológicas especializadas. Además, su servicio de notificación automática permite alertar a los usuarios en caso de condiciones extremas, lo cual es especialmente útil para la protección de cultivos y la prevención de riesgos.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/weather_station_valle.jpeg" class="img-fluid figure-img"></p>
+<figcaption>Estación meteorológica IoT desplegada en una escuela del municipio de Valle de Bravo, Estado de México</figcaption>
+</figure>
+</div>
+<p>Cada estación monitorea las siguientes variables:</p>
+<ul>
+<li>Temperatura</li>
+<li>Humedad</li>
+<li>Presión atmosférica</li>
+<li>Radiación solar (visible, UV, infrarroja)</li>
+<li>Precipitación pluvial</li>
+<li>Dirección y velocidad del viento</li>
+</ul>
+</section>
+<section id="arquitectura-del-sistema" class="level2">
+<h2 class="anchored" data-anchor-id="arquitectura-del-sistema">Arquitectura del Sistema</h2>
+<p>El hardware se implementaró en la tarjeta de desarrollo <a href="https://docs.particle.io/boron/">Particle Boron</a>, la cual permite conectividad remota a través de la red celular 3G que aún cuenta con amplia cobertura en México. La estación mide datos ambientales cada minuto y los transmite a la nube de <a href="https://www.particle.io/">Particle IO</a> en buffers cada 15 minutos. Es este punto, los datos se redireccionan mediante webhooks hacia la plataforma de <a href="https://thingspeak.mathworks.com/">ThingSpeak</a> donde se preprocesan, almacenan y visualizan mediante un dashboard construido con MATLAB. Mediante un webkook enlazado a <a href="https://www.twilio.com/es-mx">Twilio</a>, se implementa un servicio de notificación automática que emite alertas en caso de condiciones extremas (heladas, lluvias torrenciales, radiación extrema y vientos fuertes). El dashboard puede visualizarse desde dispositivos móviles a través de una aplicación móvil. La arquitectura del sistema se muestra en la siguiente figura:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/weather_station_architecture.png" class="img-fluid figure-img"></p>
+<figcaption>Arquitectura IoT basada en servicios cloud para el despliegue de las estaciones meteorológicas</figcaption>
+</figure>
+</div>
+</section>
+<section id="dashboard-de-visualización-de-datos" class="level2">
+<h2 class="anchored" data-anchor-id="dashboard-de-visualización-de-datos">Dashboard de Visualización de Datos</h2>
+<p>Los datos puede monitorearse en tiempo real a través del siguiente <a href="https://thingspeak.mathworks.com/channels/3416309">Dashbord de ThingSpeak</a> o través de una aplicación móvil. A continuación se muestran algunas capturas de pantalla del dashboard:</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/weather_station_dashboard.png" class="img-fluid figure-img"></p>
+<figcaption>Dashboard de visualización de datos meteorológicos en tiempo real</figcaption>
+</figure>
+</div>
+</section>
+<section id="visualización-de-datos-de-históricos" class="level2">
+<h2 class="anchored" data-anchor-id="visualización-de-datos-de-históricos">Visualización de Datos de Históricos</h2>
+<p>A continuación se muestran una serie de gráficas interctivos de Python (Plotly) con los datos históricos de temperatura, humedad relativa y presión en la estación meteorológica desplegada en Tláhuac, Ciudad de México. Los datos fueron recopilados durante un periodo de 10 días.</p>
+<iframe src="plots/Relative_Humidity_Comparison.html" width="100%" height="500px" style="border:none;">
+</iframe>
+<iframe src="plots/temperature_comparison.html" width="100%" height="500px" style="border:none;">
+</iframe>
+<iframe src="plots/pressure_comparison.html" width="100%" height="500px" style="border:none;">
+</iframe>
+</section>
+</div>
+</section>
+<section id="probatorios" class="level2">
+<h2 class="anchored" data-anchor-id="probatorios">Probatorios</h2>
+<p>En el siguiente enlace puedes descargar un documento emitido por Clark University como probatorio de mi trabajo en este proyecto: <a href="documents/clark_letter.pdf">Carta de Clark University</a></p>
+</section>
+<section id="agradecimientos" class="level2">
+<h2 class="anchored" data-anchor-id="agradecimientos">Agradecimientos</h2>
+<p>Este proyecto se llevó a cabo como una colaboración entre el Instituto de Ecología de la UNAM y Clark University (USA) con financiamiento de la <em>National Science Foundation</em> de los Estados Unidos.</p>
+</section>
+<section id="contacto" class="level2">
+<h2 class="anchored" data-anchor-id="contacto">Contacto</h2>
+<p>Para más información sobre el proyecto, incluyendo detalles técnicos, diagramas, código, etc., puedes enviarme un correo a <a href="mailto:cebada.fi.unam@gmail.com">cebada.fi.unam@gmail.com</a>.</p>
+
+
 </section>
 
 </main> <!-- /main -->
