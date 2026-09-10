@@ -6,10 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-09-01">
+<meta name="dcterms.date" content="2026-03-01">
 <meta name="description" content="Arquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).">
 
-<title>OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring – Ricardo Cebada Fuentes | Data Analyst &amp; IoT Developer</title>
+<title>OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Parameters Monitoring – Ricardo Cebada Fuentes | Data Analyst &amp; IoT Developer</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -126,10 +126,10 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#descripción-del-proyecto" id="toc-descripción-del-proyecto" class="nav-link active" data-scroll-target="#descripción-del-proyecto">Descripción del Proyecto</a>
-  <ul class="collapse">
-  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link" data-scroll-target="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
-  </ul></li>
+  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link active" data-scroll-target="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
+  <li><a href="#descripción-del-proyecto" id="toc-descripción-del-proyecto" class="nav-link" data-scroll-target="#descripción-del-proyecto">Descripción del Proyecto</a></li>
+  <li><a href="#agradecimientos" id="toc-agradecimientos" class="nav-link" data-scroll-target="#agradecimientos">Agradecimientos</a></li>
+  <li><a href="#contacto" id="toc-contacto" class="nav-link" data-scroll-target="#contacto">Contacto</a></li>
   </ul>
 </nav>
     </div>
@@ -138,11 +138,12 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring</h1>
+<h1 class="title">OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Parameters Monitoring</h1>
   <div class="quarto-categories">
     <div class="quarto-category">IoT</div>
     <div class="quarto-category">Cloud</div>
     <div class="quarto-category">AWS</div>
+    <div class="quarto-category">Python</div>
   </div>
   </div>
 
@@ -159,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 1, 2025</p>
+      <p class="date">March 1, 2026</p>
     </div>
   </div>
   
@@ -171,19 +172,57 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="descripción-del-proyecto" class="level2">
-<h2 class="anchored" data-anchor-id="descripción-del-proyecto">Descripción del Proyecto</h2>
-<p>Este proyecto consistió en el despliegue de estaciones meteorológicas…</p>
 <section id="tecnologías-utilizadas" class="level3">
 <h3 class="anchored" data-anchor-id="tecnologías-utilizadas">Tecnologías Utilizadas</h3>
 <ul>
-<li><strong>Hardware:</strong> ESP32, Sensores PM2.5.</li>
-<li><strong>Cloud:</strong> AWS IoT Core, ThingSpeak.</li>
+<li><strong>Hardware:</strong> ESP32-S3, MAX30102</li>
+<li><strong>Software:</strong> PlatformIO, Python</li>
+<li><strong>Cloud:</strong> AWS (IoT Core, Lambda, S3, DynamoDB), Twilio</li>
 </ul>
-<p><a href="...">Enlace al Dashboard vivo</a></p>
-
-
 </section>
+<section id="descripción-del-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="descripción-del-proyecto">Descripción del Proyecto</h2>
+<div style="text-align: justify;">
+<p>El OxiPuma Connect es un sistema que desarrolló como parte de mi trabajo en el <em>Instituto de Ciencias Aplicadas y Tecnología</em> de la UNAM (ICAT-UNAM). Se trata de un dispositivo de medición de parámetros cardiovasculares no convencionales basado en señales PPG (<em>Photoplethysmography</em>) completamente basado en la nube y que se puede monitorear remotamente. El sistema está diseñado para ser utilizado en entornos domésticos principalmente, proporcionando a los usuarios información valiosa sobre el estado cardiovascular.</p>
+<p>El principio de funcionamiento del OxiPuma es similar al de los oxímetros de dedo convencionales. Sin embargo, a diferencia de éstos que solo miden la saturación de oxígeno y la frecuencia cardiaca, el OxiPuma tiene la capacida de estimar el grado de envejecimiento vascular. Para ello, el dispositivo recaba señales PPG que se las envía a la nube de <em>AWS IoT Core</em>. Aquí, se procesan con un algoritmo desarrollado en Python que analiza su forma de onda (PPG Morphology) y a partir de ella deriva los siguientes parámetros:</p>
+<ul>
+<li>LASI (Large Artery Stiffness Index)</li>
+<li>APG_ba index (Acceleration Photoplethysmography)</li>
+<li>AIx (Augmentation Index)</li>
+<li>HRV (Heart Rate Variability)</li>
+<li>Saturación de oxígeno (SpO2)</li>
+<li>Frecuencia cardiaca (HR)</li>
+</ul>
+<p>Todos ellos son métricas que estiman el nivel de <strong>rigidez arterial</strong> y nos permiten evaluar el grado de <strong>envejecimiento vascular</strong>. Ningún dispositivo en el marcado es capaz de realizar una medición similar.</p>
+<p>De igual forma, se hace uso de algoritmos de ML no supervisados agrupar las señales PPG en diferentes clusters (K-Means, DBSCAN, Random Forest) que permiten identificar patrones de comportamiento de la señal y detectar anomalías en el sistema cardiovascular como arritmias. Los resultados del análisis se almacenan en una base de datos en la nube (<em>AWS RedShift</em>) y pueden ser visualizados a través de un dashboard web o una aplicación móvil. Además, el sistema cuenta con un servicio de notificación automática que alerta a los usuarios cuando se detecta una anomalía.</p>
+<section id="arquitectura-del-sistema" class="level2">
+<h2 class="anchored" data-anchor-id="arquitectura-del-sistema">Arquitectura del Sistema</h2>
+<p>La arquitectura del sistema de basa en un modelo de 4 capas: 1. <strong>Capa de Sensado:</strong> Se compone de un microcontrolador ESP32-S3 y un sensor PPG MAX30102 que recaba las señales PPG y las envía a la nube a través del protocolo MQTT. 2. <strong>Capa de Networking</strong>: Se encarga de la transmisión de datos desde el dispositivo hacia la nube de <em>AWS IoT Core</em>. Aquí se implementa un <em>broker</em> MQTT que recibe los datos y los redirige hacia los servicios de procesamiento. 3. <strong>Capa de Data Analysis:</strong> Se encarga del procesamiento de las señales PPG y la estimación de los parámetros cardiovasculares. Aquí se implementa un algoritmo desarrollado en Python que analiza la forma de onda de la señal PPG y estima los parámetros mencionados anteriormente. Además, se implementan algoritmos de ML no supervisados para agrupar las señales PPG en diferentes clusters y detectar anomalías. 4. <strong>Capa de Aplicación:</strong> Se encarga de la visualización de los resultados del análisis y la notificación de alertas. Aquí se implementa un dashboard web y una aplicación móvil que permiten a los usuarios visualizar los resultados del análisis y recibir notificaciones en caso de detectar anomalías.</p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/oxipuma_architecture.png" class="img-fluid figure-img"></p>
+<figcaption>Arquitectura IoT del sistema OxiPuma Connect para monitoreo remoto de parámetros cardiovasculares</figcaption>
+</figure>
+</div>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/oxipuma_diagram.png" class="img-fluid figure-img"></p>
+<figcaption>Diagrama de bloques funcional del OxiPuma Connect</figcaption>
+</figure>
+</div>
+<p>Para conocer más sobre el algoritmo de análisis de señales PPG y la clafisicación con ML no supervisado, puedes revisar el artículo “<a href="../projects/ppg_signals.html">PPG Signals Analysis for Cardiovascular Health Monitoring</a>” publicado en este mismo sitio.</p>
+</section>
+</div>
+</section>
+<section id="agradecimientos" class="level2">
+<h2 class="anchored" data-anchor-id="agradecimientos">Agradecimientos</h2>
+<p>Este proyecto se llevó a cabo como parte de mi trabajo en el <a href="https://www.icat.unam.mx/">ICAT-UNAM</a> en el Laboratorio de Dispositivos Biomédicos a cargo de la Dra. Celia A. Sánchez Pérez.</p>
+</section>
+<section id="contacto" class="level2">
+<h2 class="anchored" data-anchor-id="contacto">Contacto</h2>
+<p>Para más información sobre el proyecto, incluyendo detalles técnicos, diagramas electrónicos, código fuente, etc., puedes enviarme un correo a <a href="mailto:cebada.fi.unam@gmail.com">cebada.fi.unam@gmail.com</a>.</p>
+
+
 </section>
 
 </main> <!-- /main -->

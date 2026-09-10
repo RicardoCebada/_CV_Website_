@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2025-09-01">
+<meta name="dcterms.date" content="2025-11-05">
 <meta name="description" content="Arquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).">
 
 <title>PPG Signals Analysis for Cardiovascular Health Monitoring – Ricardo Cebada Fuentes | Data Analyst &amp; IoT Developer</title>
@@ -126,10 +126,8 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#descripción-del-proyecto" id="toc-descripción-del-proyecto" class="nav-link active" data-scroll-target="#descripción-del-proyecto">Descripción del Proyecto</a>
-  <ul class="collapse">
-  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link" data-scroll-target="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
-  </ul></li>
+  <li><a href="#tecnologías-utilizadas" id="toc-tecnologías-utilizadas" class="nav-link active" data-scroll-target="#tecnologías-utilizadas">Tecnologías Utilizadas</a></li>
+  <li><a href="#descripción-del-proyecto" id="toc-descripción-del-proyecto" class="nav-link" data-scroll-target="#descripción-del-proyecto">Descripción del Proyecto</a></li>
   </ul>
 </nav>
     </div>
@@ -142,8 +140,6 @@ ul.task-list li input[type="checkbox"] {
   <div class="quarto-categories">
     <div class="quarto-category">Data Science</div>
     <div class="quarto-category">Python</div>
-    <div class="quarto-category">Cloud</div>
-    <div class="quarto-category">AWS</div>
   </div>
   </div>
 
@@ -160,7 +156,7 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">September 1, 2025</p>
+      <p class="date">November 5, 2025</p>
     </div>
   </div>
   
@@ -172,19 +168,19 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<section id="descripción-del-proyecto" class="level2">
-<h2 class="anchored" data-anchor-id="descripción-del-proyecto">Descripción del Proyecto</h2>
-<p>Este proyecto consistió en el despliegue de estaciones meteorológicas…</p>
 <section id="tecnologías-utilizadas" class="level3">
 <h3 class="anchored" data-anchor-id="tecnologías-utilizadas">Tecnologías Utilizadas</h3>
 <ul>
-<li><strong>Hardware:</strong> ESP32, Sensores PM2.5.</li>
-<li><strong>Cloud:</strong> AWS IoT Core, ThingSpeak.</li>
+<li><strong>Software:</strong> Python (Pandas, Seaborn, Plotly, Scikit-learn)</li>
+<li><strong>Algoritmos:</strong> K-Means, DBSCAN, Random Forest</li>
 </ul>
-<p><a href="...">Enlace al Dashboard vivo</a></p>
-
-
 </section>
+<section id="descripción-del-proyecto" class="level2">
+<h2 class="anchored" data-anchor-id="descripción-del-proyecto">Descripción del Proyecto</h2>
+<p>En esta entrada se describe la arquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography) que permite estimar el grado de envejecimiento vascular y detectar anomalías en el sistema cardiovascular como arritmias. El sistema se compone de un dispositivo IoT basado en un microcontrolador ESP32-S3 y un sensor PPG MAX30102 que recaba las señales PPG y las envía a la nube de AWS IoT Core. Aquí, se procesan con un algoritmo desarrollado en Python que analiza su forma de onda (PPG Morphology) y a partir de ella deriva los siguientes parámetros:</p>
+<p>SITIO EN CONSTRUCCIÓN.</p>
+
+
 </section>
 
 </main> <!-- /main -->

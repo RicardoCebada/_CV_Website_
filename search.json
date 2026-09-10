@@ -14,6 +14,55 @@
     "text": "Descripción del Proyecto\n\n\n\n\nEstación meteorológica IoT desplegada en la zona chinampera de Tláhuac, Ciudad de México\n\n\nEste proyecto consistió en el desarrollo y despligue en campo de 3 estaciones meteorológicas de alto desempeño y conectividad remota con el objetivo de monitorear el impacto del cambio climático en zonas vulnerables del centro de México (Tláhuac, Iztapalapa y Valle de Bravo). Como lider del proyecto, estuve a cargo de la implementación completa de la arquitectura, desde la instrumentación de los sensores meteorológicos, el desarrollo del firmware para la tarjeta de desarrollo, la configuración de la conectividad remota y la implementación del dashboard de visualización y análisisde datos.\n\nVentajas Competitivas\nA defirencia de otras estaciones meteorológicas comerciales con monitoreo remoto WiFi, esta estación utiliza la señal 3G para transmitir los datos a la nube, lo cual permite su despliegue en zonas rurales y remotas donde no hay acceso a internet. Además, su mantenimiento es sencillo gracias a la fabricación mediante impresión 3D y el uso de componentes electrónicos de bajo costo. Esto permite que las estaciones puedan ser reparadas o reemplazadas fácilmente en caso de fallas. Todo esto sin comprometer la precisión y confiabilidad de las mediciones, ya que las estaciones fueron calibradas contra estaciones meteorológicas especializadas. Además, su servicio de notificación automática permite alertar a los usuarios en caso de condiciones extremas, lo cual es especialmente útil para la protección de cultivos y la prevención de riesgos.\n\n\n\nEstación meteorológica IoT desplegada en una escuela del municipio de Valle de Bravo, Estado de México\n\n\nCada estación monitorea las siguientes variables:\n\nTemperatura\nHumedad\nPresión atmosférica\nRadiación solar (visible, UV, infrarroja)\nPrecipitación pluvial\nDirección y velocidad del viento\n\n\n\nArquitectura del Sistema\nEl hardware se implementaró en la tarjeta de desarrollo Particle Boron, la cual permite conectividad remota a través de la red celular 3G que aún cuenta con amplia cobertura en México. La estación mide datos ambientales cada minuto y los transmite a la nube de Particle IO en buffers cada 15 minutos. Es este punto, los datos se redireccionan mediante webhooks hacia la plataforma de ThingSpeak donde se preprocesan, almacenan y visualizan mediante un dashboard construido con MATLAB. Mediante un webkook enlazado a Twilio, se implementa un servicio de notificación automática que emite alertas en caso de condiciones extremas (heladas, lluvias torrenciales, radiación extrema y vientos fuertes). El dashboard puede visualizarse desde dispositivos móviles a través de una aplicación móvil. La arquitectura del sistema se muestra en la siguiente figura:\n\n\n\nArquitectura IoT basada en servicios cloud para el despliegue de las estaciones meteorológicas\n\n\n\n\nDashboard de Visualización de Datos\nLos datos puede monitorearse en tiempo real a través del siguiente Dashbord de ThingSpeak o través de una aplicación móvil. A continuación se muestran algunas capturas de pantalla del dashboard:\n\n\n\nDashboard de visualización de datos meteorológicos en tiempo real\n\n\n\n\nVisualización de Datos de Históricos\nA continuación se muestran una serie de gráficas interctivos de Python (Plotly) con los datos históricos de temperatura, humedad relativa y presión en la estación meteorológica desplegada en Tláhuac, Ciudad de México. Los datos fueron recopilados durante un periodo de 10 días."
   },
   {
+    "objectID": "projects/weather_monitoring.html#ventajas-competitivas",
+    "href": "projects/weather_monitoring.html#ventajas-competitivas",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Ventajas Competitivas",
+    "text": "Ventajas Competitivas\nA defirencia de otras estaciones meteorológicas comerciales con monitoreo remoto WiFi, esta estación utiliza la señal 3G para transmitir los datos a la nube, lo cual permite su despliegue en zonas rurales y remotas donde no hay acceso a internet. Además, su mantenimiento es sencillo gracias a la fabricación mediante impresión 3D y el uso de componentes electrónicos de bajo costo. Esto permite que las estaciones puedan ser reparadas o reemplazadas fácilmente en caso de fallas. Todo esto sin comprometer la precisión y confiabilidad de las mediciones, ya que las estaciones fueron calibradas contra estaciones meteorológicas especializadas. Además, su servicio de notificación automática permite alertar a los usuarios en caso de condiciones extremas, lo cual es especialmente útil para la protección de cultivos y la prevención de riesgos.\n\n\n\nEstación meteorológica IoT desplegada en una escuela del municipio de Valle de Bravo, Estado de México\n\n\nCada estación monitorea las siguientes variables:\n\nTemperatura\nHumedad\nPresión atmosférica\nRadiación solar (visible, UV, infrarroja)\nPrecipitación pluvial\nDirección y velocidad del viento"
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#arquitectura-del-sistema",
+    "href": "projects/weather_monitoring.html#arquitectura-del-sistema",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Arquitectura del Sistema",
+    "text": "Arquitectura del Sistema\nEl hardware se implementaró en la tarjeta de desarrollo Particle Boron, la cual permite conectividad remota a través de la red celular 3G que aún cuenta con amplia cobertura en México. La estación mide datos ambientales cada minuto y los transmite a la nube de Particle IO en buffers cada 15 minutos. Es este punto, los datos se redireccionan mediante webhooks hacia la plataforma de ThingSpeak donde se preprocesan, almacenan y visualizan mediante un dashboard construido con MATLAB. Mediante un webkook enlazado a Twilio, se implementa un servicio de notificación automática que emite alertas en caso de condiciones extremas (heladas, lluvias torrenciales, radiación extrema y vientos fuertes). El dashboard puede visualizarse desde dispositivos móviles a través de una aplicación móvil. La arquitectura del sistema se muestra en la siguiente figura:\n\n\n\nArquitectura IoT basada en servicios cloud para el despliegue de las estaciones meteorológicas"
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#dashboard-de-visualización-de-datos",
+    "href": "projects/weather_monitoring.html#dashboard-de-visualización-de-datos",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Dashboard de Visualización de Datos",
+    "text": "Dashboard de Visualización de Datos\nLos datos puede monitorearse en tiempo real a través del siguiente Dashbord de ThingSpeak o través de una aplicación móvil. A continuación se muestran algunas capturas de pantalla del dashboard:\n\n\n\nDashboard de visualización de datos meteorológicos en tiempo real"
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#visualización-de-datos-de-históricos",
+    "href": "projects/weather_monitoring.html#visualización-de-datos-de-históricos",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Visualización de Datos de Históricos",
+    "text": "Visualización de Datos de Históricos\nA continuación se muestran una serie de gráficas interctivos de Python (Plotly) con los datos históricos de temperatura, humedad relativa y presión en la estación meteorológica desplegada en Tláhuac, Ciudad de México. Los datos fueron recopilados durante un periodo de 10 días."
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#probatorios",
+    "href": "projects/weather_monitoring.html#probatorios",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Probatorios",
+    "text": "Probatorios\nEn el siguiente enlace puedes descargar un documento emitido por Clark University como probatorio de mi trabajo en este proyecto: Carta de Clark University"
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#agradecimientos",
+    "href": "projects/weather_monitoring.html#agradecimientos",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Agradecimientos",
+    "text": "Agradecimientos\nEste proyecto se llevó a cabo como una colaboración entre el Instituto de Ecología de la UNAM y Clark University (USA) con financiamiento de la National Science Foundation de los Estados Unidos."
+  },
+  {
+    "objectID": "projects/weather_monitoring.html#contacto",
+    "href": "projects/weather_monitoring.html#contacto",
+    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
+    "section": "Contacto",
+    "text": "Contacto\nPara más información sobre el proyecto, incluyendo detalles técnicos, diagramas, código, etc., puedes enviarme un correo a cebada.fi.unam@gmail.com."
+  },
+  {
     "objectID": "projects/pm25_monitoring.html",
     "href": "projects/pm25_monitoring.html",
     "title": "PumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5",
@@ -51,16 +100,16 @@
   {
     "objectID": "projects/cdmx_marathon_analysis.html",
     "href": "projects/cdmx_marathon_analysis.html",
-    "title": "Maratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Análisis de Tendencias y Desempeño de los Corredores en las Ediciones 2021-2025",
+    "title": "Maratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Tendencias y Desempeño de los Corredores (2021-2025)",
     "section": "",
-    "text": "Imagen representativa de la Maratón de la Ciudad de México 2025\n#agregar un bloque de python para mostrar un ejemplo de análisis de datos\nimport requests\nimport pandas as pd\n\ndef get_data (url, marathon_id):\n  payload = {\n    \"distancia\": \"MARATON\",\n    \"carreraId\": marathon_id, #ID del Maraton\n    \"categoriaId\": \"\"\n}\n  try:\n    response=requests.post(url, data=payload)\n    if response.status_code == 200:\n      datos=response.json() #Convertimos en JSON\n      df=pd.DataFrame(datos) #Convertimos en DF\n      print(f\"Datos del ID {marathon_id} obtenidos con éxito\")\n      return df\n    else:\n      print(f\"Error de esta en el ID {marathon_id}. Error: {response.status_code}\")\n  except requests.exceptions.RequestException as e:\n    print(f\"Error en la solicitud POST del ID {marathon_id}: {e}\")\n\n#Declaramos un string con la url de MARCATE desde donde se consultan los datos\nurl = \"https://resultados.marcate.events/eventos/OverAllFilter\"\n\nmarathons_ids={\n    \"2025\": \"SPTMCAR1738126024\",\n    \"2024\": \"SPTMCAR1708028995\",\n    \"2023\": \"SPTMCAR1693172878\",\n    \"2022\": \"SPTMCAR1661467017\",\n    \"2021\": \"SPTMCAR1637605572\"\n}\n#Realizamos la consulta de datos usando dictionary comprehension para facilitar la limpieza\nresults={year:get_data(url,marathon_id) for year, marathon_id in marathons_ids.items()}\n\nDatos del ID SPTMCAR1738126024 obtenidos con éxito\nDatos del ID SPTMCAR1708028995 obtenidos con éxito\nDatos del ID SPTMCAR1693172878 obtenidos con éxito\nDatos del ID SPTMCAR1661467017 obtenidos con éxito\nDatos del ID SPTMCAR1637605572 obtenidos con éxito"
+    "text": "Software: Python (Pandas, Matplotlib, Seaborn, Scikit-learn).\nAlgortimos: K-Means, DBSCAN, Gaussian Mixture Models, Random Forest.\n\n\n\n\nImagen representativa de la Maratón de la Ciudad de México 2025\n#agregar un bloque de python para mostrar un ejemplo de análisis de datos\nimport requests\nimport pandas as pd\n\ndef get_data (url, marathon_id):\n  payload = {\n    \"distancia\": \"MARATON\",\n    \"carreraId\": marathon_id, #ID del Maraton\n    \"categoriaId\": \"\"\n}\n  try:\n    response=requests.post(url, data=payload)\n    if response.status_code == 200:\n      datos=response.json() #Convertimos en JSON\n      df=pd.DataFrame(datos) #Convertimos en DF\n      print(f\"Datos del ID {marathon_id} obtenidos con éxito\")\n      return df\n    else:\n      print(f\"Error de esta en el ID {marathon_id}. Error: {response.status_code}\")\n  except requests.exceptions.RequestException as e:\n    print(f\"Error en la solicitud POST del ID {marathon_id}: {e}\")\n\n#Declaramos un string con la url de MARCATE desde donde se consultan los datos\nurl = \"https://resultados.marcate.events/eventos/OverAllFilter\"\n\nmarathons_ids={\n    \"2025\": \"SPTMCAR1738126024\",\n    \"2024\": \"SPTMCAR1708028995\",\n    \"2023\": \"SPTMCAR1693172878\",\n    \"2022\": \"SPTMCAR1661467017\",\n    \"2021\": \"SPTMCAR1637605572\"\n}\n#Realizamos la consulta de datos usando dictionary comprehension para facilitar la limpieza\nresults={year:get_data(url,marathon_id) for year, marathon_id in marathons_ids.items()}\n\nDatos del ID SPTMCAR1738126024 obtenidos con éxito\nDatos del ID SPTMCAR1708028995 obtenidos con éxito\nDatos del ID SPTMCAR1693172878 obtenidos con éxito\nDatos del ID SPTMCAR1661467017 obtenidos con éxito\nDatos del ID SPTMCAR1637605572 obtenidos con éxito"
   },
   {
     "objectID": "projects/cdmx_marathon_analysis.html#descripción-del-proyecto",
     "href": "projects/cdmx_marathon_analysis.html#descripción-del-proyecto",
-    "title": "Maratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Análisis de Tendencias y Desempeño de los Corredores en las Ediciones 2021-2025",
+    "title": "Maratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Tendencias y Desempeño de los Corredores (2021-2025)",
     "section": "Descripción del Proyecto",
-    "text": "Descripción del Proyecto\nEl Maratón de la Ciudad de México es uno de los eventos deportivos más importantes del país, atrayendo a corredores de todo el mundo. Aunque desde el 2018 el maratón CDMX ostenta la prestigiosa categoría Gold Label, no forma parte de los llamados “World Marathon Majors” que incluyen a los maratones de Boston, Londres, Berlín, Chicago, Nueva York y Tokio. Una de las razones principales de esta exclusión es su exigente recorrido que se desarrolla a una altitud promedio de 2,240 metros sobre el nivel del mar, lo que lo convierte en uno de los maratones más difíciles del mundo.\n\nTecnologías Utilizadas\n\nLenguaje de Programación: Python.\nLibrerías: pandas, numpy, matplotlib, seaborn."
+    "text": "Descripción del Proyecto\nEl Maratón de la Ciudad de México es uno de los eventos deportivos más importantes del país, atrayendo a corredores de todo el mundo. Aunque desde el 2018 el maratón CDMX ostenta la prestigiosa categoría Gold Label, no forma parte de los llamados “World Marathon Majors” que incluyen a los maratones de Boston, Londres, Berlín, Chicago, Nueva York y Tokio. Una de las razones principales de esta exclusión es su exigente recorrido que se desarrolla a una altitud promedio de 2,240 metros sobre el nivel del mar, lo que lo convierte en uno de los maratones más difíciles del mundo."
   },
   {
     "objectID": "index.html",
@@ -72,127 +121,92 @@
   {
     "objectID": "cv.html",
     "href": "cv.html",
-    "title": "Trayectoria Profesional",
+    "title": "Curriculum Vitae",
     "section": "",
-    "text": "Para facilitar su revisión, puede consultar mi CV actualizado directamente aquí. También cuenta con una versión descargable para su archivo personal.\nDescargar mi CV completo (PDF)"
-  },
-  {
-    "objectID": "cv.html#currículum-vitae",
-    "href": "cv.html#currículum-vitae",
-    "title": "Trayectoria Profesional",
-    "section": "",
-    "text": "Para facilitar su revisión, puede consultar mi CV actualizado directamente aquí. También cuenta con una versión descargable para su archivo personal.\nDescargar mi CV completo (PDF)"
+    "text": "Puedes consultar mi CV completo en formato PDF a través del siguiente enlace:\nDESCARGA (PDF)"
   },
   {
     "objectID": "cv.html#cartas-de-recomendación-y-avales",
     "href": "cv.html#cartas-de-recomendación-y-avales",
-    "title": "Trayectoria Profesional",
+    "title": "Curriculum Vitae",
     "section": "Cartas de Recomendación y Avales",
-    "text": "Cartas de Recomendación y Avales\nA lo largo de mi formación en la UNAM he tenido la oportunidad de liderar proyectos con impacto internacional y nacional. En los siguientes enlaces puedes descargar cartas de recomendación y avales que respaldan mi trayectoria profesional.\n\n\nInstitucionales e Internacionales\n\nUniversidad de Clark (USA): Carta de agradecimiento y reconocimiento por el liderazgo en el despliegue de estaciones IoT en México.\n\nDescargar PDF\n\nMedalla Gustavo Baz Prada: Reconocimiento al desempeño excepcional en proyectos de impacto social.\n\nDescargar PDF\n\n\n\n\nPropiedad Intelectual\n\nRegistro INDAUTOR: Certificado de registro de software para el procesamiento de señales biomédicas (PPG).\n\nDescargar PDF"
+    "text": "Cartas de Recomendación y Avales\nEn los siguientes enlaces puedes descargar cartas de recomendación y avales que respaldan mi compromiso y trayectoria profesional.\n\nClark University (USA)\nCarta que avala mi participación en el proyecto de desarrollo de estaciones meteorológicas con conectividad remota para el monitoreo del cambio climático en México.\n\nDr. Timothy J. Downs\nInvestigador Principal del Proyecto\nProfesor de Ciencia y Política Ambiental\nCorreo: TDowns@clarku.edu\nDESCARGA (PDF)\n\n\nUniversidad Nacional Autónoma de México (UNAM)\nIng. L. Manuel García Espinosa\nArea de Instrumentación Meteorológica\nInstituto de Ciencias de la Atmósfera y Cambio Climático, UNAM\nCorreo: mgare@atmosfera.unam.mx\nDESCARGA (PDF)\n\n\nUniversidad Autónoma de Morelos (UAEM)\nCarta que avala mi participación en el proyecto monitoreo de calidad del aire en estufas de leña en comunidades indígenas de Chiapas, México.\nDr. José Luis Montiel Hernández\nProfesor Investigador del Departamento de Farmacia\nCorreo: jlmontiel@uaem.mx\n\nDESCARGA (PDF)\n\n\nPropiedad Intelectual OxiPuma\nCarta aval emitida por el IMPI con el registro de propiedad intelectual del firmware para oxímetros con conectividad bluetooth.\n\nDESCARGA (PDF)\n\n\nPremio de Servicio Social UNAM 2018 “Dr. Gustavo Baz Prada”\nPremio otorgado por la UNAM por el mejor servicio social en la carrera de Ingeniería Mecatrónica en el año 2018."
   },
   {
     "objectID": "gallery.html",
     "href": "gallery.html",
     "title": "Galería Multimedia",
     "section": "",
-    "text": "En esta sección encontrarás videos de entrevistas, presentaciones en conferencias y webinars relacionados con mis proyectos y áreas de especialización."
+    "text": "En esta sección encontrarás videos de presentaciones en conferencias, entrevistas y otros contenidos multimedia relacionados con mi trabajo."
   },
   {
     "objectID": "gallery.html#presentación-en-el-ix-latin-american-congress-on-biomedical-engineering-claib-2022",
     "href": "gallery.html#presentación-en-el-ix-latin-american-congress-on-biomedical-engineering-claib-2022",
     "title": "Galería Multimedia",
     "section": "Presentación en el IX Latin American Congress on Biomedical Engineering (CLAIB 2022)",
-    "text": "Presentación en el IX Latin American Congress on Biomedical Engineering (CLAIB 2022)"
+    "text": "Presentación en el IX Latin American Congress on Biomedical Engineering (CLAIB 2022)\nEl siguiente video muestra mi ponencia en el IX Latin American Congress on Biomedical Engineering (CLAIB 2022), donde presenté resultados preliminares en el desarrollo del sistema de monitoreo OxiPuma Connect"
   },
   {
     "objectID": "gallery.html#fragmento-del-video-promocional-del-proyecto-de-monitoreo-climático-colaboración-unam-clark-university",
     "href": "gallery.html#fragmento-del-video-promocional-del-proyecto-de-monitoreo-climático-colaboración-unam-clark-university",
     "title": "Galería Multimedia",
     "section": "Fragmento del Video Promocional del Proyecto de Monitoreo Climático (Colaboración UNAM-Clark University)",
-    "text": "Fragmento del Video Promocional del Proyecto de Monitoreo Climático (Colaboración UNAM-Clark University)\n\n\nDocumentación y Avales\nAquí puedes consultar la carta de reconocimiento de la Universidad de Clark por el proyecto de monitoreo lacustre[cite: 1].\nDescargar Carta de Agradecimiento Clark-UNAM (PDF)"
+    "text": "Fragmento del Video Promocional del Proyecto de Monitoreo Climático (Colaboración UNAM-Clark University)"
   },
   {
     "objectID": "portfolio.html",
     "href": "portfolio.html",
     "title": "Portafolio de Proyectos",
     "section": "",
-    "text": "Aquí presento los proyectos más destacados de mi trayectoria en investigación y desarrollo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Análisis de Tendencias y Desempeño de los Corredores en las Ediciones 2021-2025\n\n\n\nData Science\n\nPython\n\n\n\nEn esta entrada, utilizaremos Python para explorar los resultados oficiales de las ediciones 2021 a 2025, con el objetivo de identificar tendencias en el desempeño de los…\n\n\n\n\n\n\nSep 10, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nOxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring\n\n\n\nIoT\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nDesarrollo e implementación de un sistema IoT utilizando ESP32 y AWS IoT Core para el monitoreo en tiempo real de partículas PM2.5, con visualización de datos a través de…\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nPPG Signals Analysis for Cardiovascular Health Monitoring\n\n\n\nData Science\n\nPython\n\nCloud\n\nAWS\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nIoT Weather Stations for Environmental Monitoring in Central Mexico\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nEstaciones meteorológicas inteligentes con conectividad remota IoT fabricadas mediante impresión 3D.\n\n\n\n\n\n\nSep 1, 2025\n\n\n\n\n\n\nNo matching items"
+    "text": "Aquí presento los proyectos más destacados de mi trayectoria en investigación y desarrollo.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nIoT Weather Stations for Environmental Monitoring in Central Mexico\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nEstaciones meteorológicas inteligentes con conectividad remota IoT fabricadas mediante impresión 3D.\n\n\n\n\n\n\nJul 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nPumaAirQ: Dispositivo IoT para Monitoreo Remoto de PM2.5\n\n\n\nIoT\n\nCloud\n\nThingSpeak\n\n\n\nDesarrollo e implementación de un sistema IoT utilizando ESP32 y AWS IoT Core para el monitoreo en tiempo real de partículas PM2.5, con visualización de datos a través de…\n\n\n\n\n\n\nMay 5, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nOxiPuma Connect: IoT Solution for Real-Time Cardiovascular Parameters Monitoring\n\n\n\nIoT\n\nCloud\n\nAWS\n\nPython\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nMar 1, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nPPG Signals Analysis for Cardiovascular Health Monitoring\n\n\n\nData Science\n\nPython\n\n\n\nArquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography).\n\n\n\n\n\n\nNov 5, 2025\n\n\n\n\n\n\n\n\n\n\n\n\n\nMaratón de la Ciudad de México, ¿uno de los más exigentes del mundo?: Tendencias y Desempeño de los Corredores (2021-2025)\n\n\n\nData Science\n\nPython\n\n\n\nEn esta entrada, utilizaremos Python para explorar los resultados oficiales de las ediciones 2021 a 2025, con el objetivo de identificar tendencias en el desempeño de los…\n\n\n\n\n\n\nOct 12, 2025\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "projects/oxipuma_connect.html",
     "href": "projects/oxipuma_connect.html",
-    "title": "OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring",
+    "title": "OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Parameters Monitoring",
     "section": "",
-    "text": "Este proyecto consistió en el despliegue de estaciones meteorológicas…\n\n\n\nHardware: ESP32, Sensores PM2.5.\nCloud: AWS IoT Core, ThingSpeak.\n\nEnlace al Dashboard vivo"
+    "text": "Hardware: ESP32-S3, MAX30102\nSoftware: PlatformIO, Python\nCloud: AWS (IoT Core, Lambda, S3, DynamoDB), Twilio"
   },
   {
     "objectID": "projects/oxipuma_connect.html#descripción-del-proyecto",
     "href": "projects/oxipuma_connect.html#descripción-del-proyecto",
-    "title": "OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Monitoring",
-    "section": "",
-    "text": "Este proyecto consistió en el despliegue de estaciones meteorológicas…\n\n\n\nHardware: ESP32, Sensores PM2.5.\nCloud: AWS IoT Core, ThingSpeak.\n\nEnlace al Dashboard vivo"
+    "title": "OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Parameters Monitoring",
+    "section": "Descripción del Proyecto",
+    "text": "Descripción del Proyecto\n\nEl OxiPuma Connect es un sistema que desarrolló como parte de mi trabajo en el Instituto de Ciencias Aplicadas y Tecnología de la UNAM (ICAT-UNAM). Se trata de un dispositivo de medición de parámetros cardiovasculares no convencionales basado en señales PPG (Photoplethysmography) completamente basado en la nube y que se puede monitorear remotamente. El sistema está diseñado para ser utilizado en entornos domésticos principalmente, proporcionando a los usuarios información valiosa sobre el estado cardiovascular.\nEl principio de funcionamiento del OxiPuma es similar al de los oxímetros de dedo convencionales. Sin embargo, a diferencia de éstos que solo miden la saturación de oxígeno y la frecuencia cardiaca, el OxiPuma tiene la capacida de estimar el grado de envejecimiento vascular. Para ello, el dispositivo recaba señales PPG que se las envía a la nube de AWS IoT Core. Aquí, se procesan con un algoritmo desarrollado en Python que analiza su forma de onda (PPG Morphology) y a partir de ella deriva los siguientes parámetros:\n\nLASI (Large Artery Stiffness Index)\nAPG_ba index (Acceleration Photoplethysmography)\nAIx (Augmentation Index)\nHRV (Heart Rate Variability)\nSaturación de oxígeno (SpO2)\nFrecuencia cardiaca (HR)\n\nTodos ellos son métricas que estiman el nivel de rigidez arterial y nos permiten evaluar el grado de envejecimiento vascular. Ningún dispositivo en el marcado es capaz de realizar una medición similar.\nDe igual forma, se hace uso de algoritmos de ML no supervisados agrupar las señales PPG en diferentes clusters (K-Means, DBSCAN, Random Forest) que permiten identificar patrones de comportamiento de la señal y detectar anomalías en el sistema cardiovascular como arritmias. Los resultados del análisis se almacenan en una base de datos en la nube (AWS RedShift) y pueden ser visualizados a través de un dashboard web o una aplicación móvil. Además, el sistema cuenta con un servicio de notificación automática que alerta a los usuarios cuando se detecta una anomalía.\n\nArquitectura del Sistema\nLa arquitectura del sistema de basa en un modelo de 4 capas: 1. Capa de Sensado: Se compone de un microcontrolador ESP32-S3 y un sensor PPG MAX30102 que recaba las señales PPG y las envía a la nube a través del protocolo MQTT. 2. Capa de Networking: Se encarga de la transmisión de datos desde el dispositivo hacia la nube de AWS IoT Core. Aquí se implementa un broker MQTT que recibe los datos y los redirige hacia los servicios de procesamiento. 3. Capa de Data Analysis: Se encarga del procesamiento de las señales PPG y la estimación de los parámetros cardiovasculares. Aquí se implementa un algoritmo desarrollado en Python que analiza la forma de onda de la señal PPG y estima los parámetros mencionados anteriormente. Además, se implementan algoritmos de ML no supervisados para agrupar las señales PPG en diferentes clusters y detectar anomalías. 4. Capa de Aplicación: Se encarga de la visualización de los resultados del análisis y la notificación de alertas. Aquí se implementa un dashboard web y una aplicación móvil que permiten a los usuarios visualizar los resultados del análisis y recibir notificaciones en caso de detectar anomalías.\n\n\n\nArquitectura IoT del sistema OxiPuma Connect para monitoreo remoto de parámetros cardiovasculares\n\n\n\n\n\nDiagrama de bloques funcional del OxiPuma Connect\n\n\nPara conocer más sobre el algoritmo de análisis de señales PPG y la clafisicación con ML no supervisado, puedes revisar el artículo “PPG Signals Analysis for Cardiovascular Health Monitoring” publicado en este mismo sitio."
+  },
+  {
+    "objectID": "projects/oxipuma_connect.html#arquitectura-del-sistema",
+    "href": "projects/oxipuma_connect.html#arquitectura-del-sistema",
+    "title": "OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Parameters Monitoring",
+    "section": "Arquitectura del Sistema",
+    "text": "Arquitectura del Sistema\nLa arquitectura del sistema de basa en un modelo de 4 capas: 1. Capa de Sensado: Se compone de un microcontrolador ESP32-S3 y un sensor PPG MAX30102 que recaba las señales PPG y las envía a la nube a través del protocolo MQTT. 2. Capa de Networking: Se encarga de la transmisión de datos desde el dispositivo hacia la nube de AWS IoT Core. Aquí se implementa un broker MQTT que recibe los datos y los redirige hacia los servicios de procesamiento. 3. Capa de Data Analysis: Se encarga del procesamiento de las señales PPG y la estimación de los parámetros cardiovasculares. Aquí se implementa un algoritmo desarrollado en Python que analiza la forma de onda de la señal PPG y estima los parámetros mencionados anteriormente. Además, se implementan algoritmos de ML no supervisados para agrupar las señales PPG en diferentes clusters y detectar anomalías. 4. Capa de Aplicación: Se encarga de la visualización de los resultados del análisis y la notificación de alertas. Aquí se implementa un dashboard web y una aplicación móvil que permiten a los usuarios visualizar los resultados del análisis y recibir notificaciones en caso de detectar anomalías.\n\n\n\nArquitectura IoT del sistema OxiPuma Connect para monitoreo remoto de parámetros cardiovasculares\n\n\n\n\n\nDiagrama de bloques funcional del OxiPuma Connect\n\n\nPara conocer más sobre el algoritmo de análisis de señales PPG y la clafisicación con ML no supervisado, puedes revisar el artículo “PPG Signals Analysis for Cardiovascular Health Monitoring” publicado en este mismo sitio."
+  },
+  {
+    "objectID": "projects/oxipuma_connect.html#agradecimientos",
+    "href": "projects/oxipuma_connect.html#agradecimientos",
+    "title": "OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Parameters Monitoring",
+    "section": "Agradecimientos",
+    "text": "Agradecimientos\nEste proyecto se llevó a cabo como parte de mi trabajo en el ICAT-UNAM en el Laboratorio de Dispositivos Biomédicos a cargo de la Dra. Celia A. Sánchez Pérez."
+  },
+  {
+    "objectID": "projects/oxipuma_connect.html#contacto",
+    "href": "projects/oxipuma_connect.html#contacto",
+    "title": "OxiPuma Connect: IoT Solution for Real-Time Cardiovascular Parameters Monitoring",
+    "section": "Contacto",
+    "text": "Contacto\nPara más información sobre el proyecto, incluyendo detalles técnicos, diagramas electrónicos, código fuente, etc., puedes enviarme un correo a cebada.fi.unam@gmail.com."
   },
   {
     "objectID": "projects/ppg_signals.html",
     "href": "projects/ppg_signals.html",
     "title": "PPG Signals Analysis for Cardiovascular Health Monitoring",
     "section": "",
-    "text": "Este proyecto consistió en el despliegue de estaciones meteorológicas…\n\n\n\nHardware: ESP32, Sensores PM2.5.\nCloud: AWS IoT Core, ThingSpeak.\n\nEnlace al Dashboard vivo"
+    "text": "Software: Python (Pandas, Seaborn, Plotly, Scikit-learn)\nAlgoritmos: K-Means, DBSCAN, Random Forest"
   },
   {
     "objectID": "projects/ppg_signals.html#descripción-del-proyecto",
     "href": "projects/ppg_signals.html#descripción-del-proyecto",
     "title": "PPG Signals Analysis for Cardiovascular Health Monitoring",
-    "section": "",
-    "text": "Este proyecto consistió en el despliegue de estaciones meteorológicas…\n\n\n\nHardware: ESP32, Sensores PM2.5.\nCloud: AWS IoT Core, ThingSpeak.\n\nEnlace al Dashboard vivo"
-  },
-  {
-    "objectID": "projects/weather_monitoring.html#arquitectura-del-sistema",
-    "href": "projects/weather_monitoring.html#arquitectura-del-sistema",
-    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
-    "section": "Arquitectura del Sistema",
-    "text": "Arquitectura del Sistema\nEl hardware se implementaró en la tarjeta de desarrollo Particle Boron, la cual permite conectividad remota a través de la red celular 3G que aún cuenta con amplia cobertura en México. La estación mide datos ambientales cada minuto y los transmite a la nube de Particle IO en buffers cada 15 minutos. Es este punto, los datos se redireccionan mediante webhooks hacia la plataforma de ThingSpeak donde se preprocesan, almacenan y visualizan mediante un dashboard construido con MATLAB. Mediante un webkook enlazado a Twilio, se implementa un servicio de notificación automática que emite alertas en caso de condiciones extremas (heladas, lluvias torrenciales, radiación extrema y vientos fuertes). El dashboard puede visualizarse desde dispositivos móviles a través de una aplicación móvil. La arquitectura del sistema se muestra en la siguiente figura:\n\n\n\nArquitectura IoT basada en servicios cloud para el despliegue de las estaciones meteorológicas"
-  },
-  {
-    "objectID": "projects/weather_monitoring.html#dashboard-de-visualización-de-datos",
-    "href": "projects/weather_monitoring.html#dashboard-de-visualización-de-datos",
-    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
-    "section": "Dashboard de Visualización de Datos",
-    "text": "Dashboard de Visualización de Datos\nLos datos puede monitorearse en tiempo real a través del siguiente Dashbord de ThingSpeak o través de una aplicación móvil. A continuación se muestran algunas capturas de pantalla del dashboard:\n\n\n\nDashboard de visualización de datos meteorológicos en tiempo real"
-  },
-  {
-    "objectID": "projects/weather_monitoring.html#agradecimientos",
-    "href": "projects/weather_monitoring.html#agradecimientos",
-    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
-    "section": "Agradecimientos",
-    "text": "Agradecimientos\nEste proyecto se llevó a cabo como una colaboración entre el Instituto de Ecología de la UNAM y Clark University (USA) con financiamiento de la National Science Foundation de los Estados Unidos."
-  },
-  {
-    "objectID": "projects/weather_monitoring.html#contacto",
-    "href": "projects/weather_monitoring.html#contacto",
-    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
-    "section": "Contacto",
-    "text": "Contacto\nPara más información sobre el proyecto, incluyendo detalles técnicos, diagramas, código, etc., puedes enviarme un correo a cebada.fi.unam@gmail.com."
-  },
-  {
-    "objectID": "projects/weather_monitoring.html#ventajas-competitivas",
-    "href": "projects/weather_monitoring.html#ventajas-competitivas",
-    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
-    "section": "Ventajas Competitivas",
-    "text": "Ventajas Competitivas\nA defirencia de otras estaciones meteorológicas comerciales con monitoreo remoto WiFi, esta estación utiliza la señal 3G para transmitir los datos a la nube, lo cual permite su despliegue en zonas rurales y remotas donde no hay acceso a internet. Además, su mantenimiento es sencillo gracias a la fabricación mediante impresión 3D y el uso de componentes electrónicos de bajo costo. Esto permite que las estaciones puedan ser reparadas o reemplazadas fácilmente en caso de fallas. Todo esto sin comprometer la precisión y confiabilidad de las mediciones, ya que las estaciones fueron calibradas contra estaciones meteorológicas especializadas. Además, su servicio de notificación automática permite alertar a los usuarios en caso de condiciones extremas, lo cual es especialmente útil para la protección de cultivos y la prevención de riesgos.\n\n\n\nEstación meteorológica IoT desplegada en una escuela del municipio de Valle de Bravo, Estado de México\n\n\nCada estación monitorea las siguientes variables:\n\nTemperatura\nHumedad\nPresión atmosférica\nRadiación solar (visible, UV, infrarroja)\nPrecipitación pluvial\nDirección y velocidad del viento"
-  },
-  {
-    "objectID": "projects/weather_monitoring.html#visualización-de-datos-de-históricos",
-    "href": "projects/weather_monitoring.html#visualización-de-datos-de-históricos",
-    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
-    "section": "Visualización de Datos de Históricos",
-    "text": "Visualización de Datos de Históricos\nA continuación se muestran una serie de gráficas interctivos de Python (Plotly) con los datos históricos de temperatura, humedad relativa y presión en la estación meteorológica desplegada en Tláhuac, Ciudad de México. Los datos fueron recopilados durante un periodo de 10 días."
-  },
-  {
-    "objectID": "projects/weather_monitoring.html#probatorios",
-    "href": "projects/weather_monitoring.html#probatorios",
-    "title": "IoT Weather Stations for Environmental Monitoring in Central Mexico",
-    "section": "Probatorios",
-    "text": "Probatorios\nEn el siguiente enlace puedes descargar un documento emitido por Clark University como probatorio de mi trabajo en este proyecto: Carta de Clark University"
+    "section": "Descripción del Proyecto",
+    "text": "Descripción del Proyecto\nEn esta entrada se describe la arquitectura de un sistema de monitoreo de salud cardiovascular basado en señales PPG (Photoplethysmography) que permite estimar el grado de envejecimiento vascular y detectar anomalías en el sistema cardiovascular como arritmias. El sistema se compone de un dispositivo IoT basado en un microcontrolador ESP32-S3 y un sensor PPG MAX30102 que recaba las señales PPG y las envía a la nube de AWS IoT Core. Aquí, se procesan con un algoritmo desarrollado en Python que analiza su forma de onda (PPG Morphology) y a partir de ella deriva los siguientes parámetros:\nSITIO EN CONSTRUCCIÓN."
   }
 ]
